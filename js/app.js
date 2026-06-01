@@ -307,17 +307,14 @@ class App {
         const stars = '★'.repeat(entry.potential || 3) + '☆'.repeat(5 - (entry.potential || 3));
         
         return `
-            <div class="glass-card rounded-xl p-5 card-hover border border-gray-800">
+            <div class="glass-card rounded-xl p-5 card-hover border border-gray-800 flex flex-col h-full">
                 <div class="flex justify-between items-start mb-3">
                     <span class="tag-business text-white text-xs px-3 py-1 rounded-full">💡 商业点子</span>
-                    <button onclick="app.toggleFavorite('${id}', ${index})" 
-                        class="fav-btn text-2xl ${isFav ? 'fav-active' : 'text-gray-600 hover:text-pink-400'}">
-                        <i class="fas fa-heart${isFav ? '' : '-o'}"></i>
-                    </button>
+                    <span class="text-yellow-400 text-sm">${stars}</span>
                 </div>
                 
                 <h3 class="text-lg font-bold mb-2 text-white">${entry.title}</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-3">${entry.description}</p>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-3 flex-1">${entry.description}</p>
                 
                 <div class="flex flex-wrap gap-2 mb-4">
                     ${(entry.tags || []).slice(0, 3).map(tag => 
@@ -325,10 +322,16 @@ class App {
                     ).join('')}
                 </div>
                 
-                <div class="flex justify-between items-center text-sm">
-                    <span class="text-yellow-400">${stars}</span>
+                <div class="flex justify-between items-center text-sm mb-3">
                     <span class="text-gray-500">${entry.date}</span>
                 </div>
+                
+                <button onclick="app.toggleFavorite('${id}', ${index})" 
+                    class="w-full py-3 rounded-lg font-medium transition ${isFav 
+                        ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white' 
+                        : 'bg-gray-800 hover:bg-gray-700 text-gray-300'}">
+                    <i class="fas fa-heart${isFav ? '' : '-o'} mr-2"></i>${isFav ? '已收藏' : '收藏'}
+                </button>
             </div>
         `;
     }
@@ -337,25 +340,18 @@ class App {
         const isFav = this.auth.isFavorite(id);
         
         return `
-            <div class="glass-card rounded-xl p-5 card-hover border border-gray-800">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-tech text-white text-xs px-3 py-1 rounded-full">⚡ GitHub</span>
-                    <button onclick="app.toggleFavorite('${id}', ${index})" 
-                        class="fav-btn text-2xl ${isFav ? 'fav-active' : 'text-gray-600 hover:text-pink-400'}">
-                        <i class="fas fa-heart${isFav ? '' : '-o'}"></i>
-                    </button>
-                </div>
-                
+            <div class="glass-card rounded-xl p-5 card-hover border border-gray-800 flex flex-col h-full">
                 <div class="flex items-center mb-3">
                     <img src="${entry.avatar}" alt="${entry.author}" class="w-10 h-10 rounded-full mr-3" 
                         onerror="this.src='https://github.com/ghost.png'">
-                    <div>
+                    <div class="flex-1">
                         <h3 class="font-bold text-white">${entry.name.split('/')[1] || entry.name}</h3>
                         <p class="text-xs text-gray-500">${entry.author}</p>
                     </div>
+                    <span class="tag-tech text-white text-xs px-3 py-1 rounded-full">⚡ GitHub</span>
                 </div>
                 
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">${entry.description || '暂无描述'}</p>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2 flex-1">${entry.description || '暂无描述'}</p>
                 
                 <div class="flex items-center gap-4 mb-4 text-sm text-gray-400">
                     ${entry.language ? `<span><i class="fas fa-code mr-1"></i>${entry.language}</span>` : ''}
@@ -363,12 +359,17 @@ class App {
                     <span><i class="fas fa-code-branch mr-1"></i>${this.formatNumber(entry.forks)}</span>
                 </div>
                 
-                <div class="flex justify-between items-center">
-                    <span class="text-gray-500 text-sm">${entry.date}</span>
+                <div class="flex gap-2">
                     <a href="${entry.url}" target="_blank" 
-                        class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm transition">
-                        <i class="fab fa-github mr-1"></i>查看
+                        class="flex-1 py-3 text-center bg-gray-800 hover:bg-gray-700 rounded-lg text-sm transition">
+                        <i class="fab fa-github mr-1"></i>查看项目
                     </a>
+                    <button onclick="app.toggleFavorite('${id}', ${index})" 
+                        class="px-6 py-3 rounded-lg font-medium transition ${isFav 
+                            ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white' 
+                            : 'bg-gray-800 hover:bg-gray-700 text-gray-300'}">
+                        <i class="fas fa-heart${isFav ? '' : '-o'} mr-1"></i>${isFav ? '已收藏' : '收藏'}
+                    </button>
                 </div>
             </div>
         `;
