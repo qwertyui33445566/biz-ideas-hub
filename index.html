@@ -122,6 +122,16 @@
             padding: 4px 12px;
             border-radius: 4px;
         }
+        
+        .sort-active {
+            background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+            color: white;
+        }
+        
+        .filter-chip {
+            transition: all 0.2s ease;
+    cursor: pointer;
+}
     </style>
 </head>
 <body class="text-white">
@@ -266,8 +276,22 @@
             </button>
         </div>
 
+        <!-- Sort Bar -->
+        <div class="flex gap-2 mb-4 overflow-x-auto items-center">
+            <span class="text-gray-500 text-sm mr-1 shrink-0">排序:</span>
+            <button class="sort-btn sort-active px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap glass-card hover:border-cyan-500/50 transition" data-sort="newest">
+                🆕 最新
+            </button>
+            <button class="sort-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap glass-card hover:border-cyan-500/50 transition" data-sort="hottest">
+                🔥 热门榜
+            </button>
+            <button class="sort-btn px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap glass-card hover:border-cyan-500/50 transition" data-sort="stars">
+                ⭐ Star排名
+            </button>
+        </div>
+
         <!-- Search & Filters -->
-        <div class="glass-card rounded-xl p-4 mb-6 border border-gray-800">
+        <div class="glass-card rounded-xl p-4 mb-4 border border-gray-800">
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="flex-1 relative">
                     <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
@@ -280,15 +304,15 @@
                     </select>
                 </div>
             </div>
+            <!-- 动态筛选标签 -->
+            <div id="filter-tags" class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-gray-700/50"></div>
         </div>
 
         <!-- Content Stats -->
-        <div class="flex items-center justify-between mb-6 text-sm text-gray-400">
-            <span id="content-count">共 0 条内容</span>
-            <span id="favorites-count" class="hidden">
-                <i class="fas fa-heart text-pink-400 mr-1"></i>
-                收藏 0 条
-            </span>
+        <div class="flex items-center justify-between mb-4 text-sm text-gray-400">
+            <div>
+                <span id="content-count">共 0 条内容</span>
+            </div>
         </div>
 
         <!-- Content Grid -->
@@ -307,7 +331,7 @@
         </div>
 
         <!-- Detail Modal -->
-        <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+        <div id="detail-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
             <div class="glass-card border border-gray-700 rounded-2xl w-full max-w-2xl max-h-screen overflow-y-auto">
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-4">
