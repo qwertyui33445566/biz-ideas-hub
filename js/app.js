@@ -202,8 +202,19 @@ class App {
             this.updateDateOptions();
         } catch (error) {
             console.error('加载数据失败:', error);
+            // 使用内置数据
+            this.data = this.getFallbackData();
         }
         document.getElementById('loading').classList.add('hidden');
+        this.render();
+    }
+
+    getFallbackData() {
+        return {
+            lastUpdate: new Date().toISOString(),
+            dates: [new Date().toISOString().split('T')[0]],
+            entries: []
+        };
     }
 
     updateDateOptions() {
