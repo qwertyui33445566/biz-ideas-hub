@@ -70,14 +70,14 @@ class App {
         });
 
         // 生成邀请码
-        document.getElementById('generate-invite')?.addEventListener('click', () => {
+        document.getElementById('generate-invite-btn')?.addEventListener('click', () => {
             if (!this.auth.isLoggedIn()) {
                 alert('请先登录');
                 return;
             }
             const code = this.auth.generateInviteCode();
             document.getElementById('invite-code-display').textContent = code;
-            document.getElementById('invite-code-container').classList.remove('hidden');
+            document.getElementById('invite-code-display').classList.remove('hidden');
             
             // 30分钟倒计时
             let seconds = 30 * 60;
@@ -85,11 +85,11 @@ class App {
                 seconds--;
                 if (seconds <= 0) {
                     clearInterval(timer);
-                    document.getElementById('invite-code-container').classList.add('hidden');
+                    document.getElementById('invite-code-display').classList.add('hidden');
                 }
                 const m = Math.floor(seconds / 60);
                 const s = seconds % 60;
-                document.getElementById('invite-countdown').textContent = 
+                document.getElementById('countdown-timer').textContent = 
                     `剩余 ${m}:${s.toString().padStart(2, '0')}`;
             }, 1000);
         });
@@ -118,6 +118,14 @@ class App {
         });
         document.getElementById('detail-modal')?.addEventListener('click', (e) => {
             if (e.target.id === 'detail-modal') this.closeDetail();
+        });
+        
+        // 邀请弹窗
+        document.getElementById('invite-btn')?.addEventListener('click', () => {
+            document.getElementById('invite-modal')?.classList.remove('hidden');
+        });
+        document.getElementById('close-invite-modal')?.addEventListener('click', () => {
+            document.getElementById('invite-modal')?.classList.add('hidden');
         });
     }
 
