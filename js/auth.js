@@ -225,6 +225,15 @@ class AuthSystem {
         return this.currentUser && this.currentUser.favorites.includes(itemId);
     }
 
+    toggleFavorite(itemId) {
+        if (!this.currentUser) return;
+        if (this.isFavorite(itemId)) {
+            this.removeFavorite(itemId);
+        } else {
+            this.addFavorite(itemId);
+        }
+    }
+
     // 获取我的邀请记录
     getMyInvites() {
         if (!this.currentUser) return [];

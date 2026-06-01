@@ -3,128 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商业点子 & GitHub 热门项目</title>
+    <title>💡 商业点子 & GitHub 热门</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
-        .tag-business { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .tag-tech { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-        .fade-in { animation: fadeIn 0.5s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .modal-backdrop { background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
-        .countdown { font-family: monospace; }
+        :root {
+            --bg-primary: #0a0a1a;
+            --bg-card: #12122a;
+            --accent-1: #00d4ff;
+            --accent-2: #7c3aed;
+            --accent-3: #f472b6;
+        }
+        
+        body {
+            background: var(--bg-primary);
+            background-image: 
+                radial-gradient(ellipse at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+            min-height: 100vh;
+        }
+        
+        .glass-card {
+            background: rgba(18, 18, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .glow-border {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+        
+        .tab-active {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            color: white;
+        }
+        
+        .tag-business {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+        }
+        
+        .tag-tech {
+            background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 212, 255, 0.5);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .fav-btn:hover {
+            transform: scale(1.2);
+        }
+        
+        .fav-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .fav-active {
+            color: #f472b6 !important;
+            text-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
+        }
+        
+        .modal-backdrop {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+        }
+        
+        .cyber-btn {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            transition: all 0.3s ease;
+        }
+        
+        .cyber-btn:hover {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        input, select {
+            background: rgba(18, 18, 42, 0.8) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+        
+        input:focus, select:focus {
+            border-color: var(--accent-1) !important;
+            outline: none;
+        }
+        
+        select option {
+            background: var(--bg-card);
+            color: white;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-2);
+            border-radius: 4px;
+        }
+        
+        .countdown {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
+<body class="text-white">
     <!-- Auth Modal -->
     <div id="auth-modal" class="fixed inset-0 modal-backdrop z-50 flex items-center justify-center">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 overflow-hidden">
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
-                <h2 class="text-2xl font-bold">会员专享</h2>
-                <p class="text-blue-100 mt-1">商业点子 & GitHub 热门项目聚合站</p>
+        <div class="glass-card rounded-2xl w-full max-w-md mx-4 overflow-hidden glow-border">
+            <div class="bg-gradient-to-r from-cyan-500 to-purple-600 p-6">
+                <h2 class="text-2xl font-bold glow-text">🚀 会员专享</h2>
+                <p class="text-cyan-100 mt-1">商业点子 & GitHub 热门聚合站</p>
             </div>
             
             <div id="login-form-container" class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">会员登录</h3>
+                <h3 class="text-lg font-semibold mb-4">🔐 会员登录</h3>
                 <form id="login-form" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">用户名</label>
                         <input type="text" id="login-username" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                            placeholder="请输入用户名">
+                            class="w-full px-4 py-3 rounded-lg"
+                            placeholder="用户名">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">密码</label>
                         <input type="password" id="login-password" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                            placeholder="请输入密码">
+                            class="w-full px-4 py-3 rounded-lg"
+                            placeholder="密码">
                     </div>
-                    <button type="submit" class="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium">
+                    <button type="submit" class="w-full py-3 cyber-btn rounded-lg font-medium">
                         登录
                     </button>
                 </form>
-                <p class="text-center text-sm text-gray-500 mt-4">
-                    新用户？请联系会员获取邀请码
-                    <button id="switch-to-register" class="text-blue-600 hover:underline ml-1">使用邀请码注册</button>
+                <p class="text-center text-sm text-gray-400 mt-4">
+                    新用户？
+                    <button id="switch-to-register" class="text-cyan-400 hover:text-cyan-300 ml-1">使用邀请码注册</button>
                 </p>
             </div>
 
             <div id="register-form-container" class="p-6 hidden">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">邀请码注册</h3>
+                <h3 class="text-lg font-semibold mb-4">🎫 邀请码注册</h3>
                 <form id="register-form" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">用户名</label>
                         <input type="text" id="reg-username" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                            class="w-full px-4 py-3 rounded-lg"
                             placeholder="设置用户名">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">密码</label>
                         <input type="password" id="reg-password" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                            class="w-full px-4 py-3 rounded-lg"
                             placeholder="设置密码">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">邀请码 <span class="text-red-500">*</span></label>
                         <input type="text" id="reg-invite-code" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                            placeholder="请输入会员邀请码（30分钟内有效）">
-                        <p class="text-xs text-gray-400 mt-1">邀请码由已注册会员生成，30分钟后自动失效</p>
+                            class="w-full px-4 py-3 rounded-lg"
+                            placeholder="请输入邀请码">
+                        <p class="text-xs text-gray-500 mt-1">邀请码由已注册会员生成，30分钟内有效</p>
                     </div>
-                    <button type="submit" class="w-full py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition font-medium">
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:opacity-90 transition font-medium">
                         注册
                     </button>
                 </form>
-                <p class="text-center text-sm text-gray-500 mt-4">
-                    已有账号？<button id="switch-to-login" class="text-blue-600 hover:underline">直接登录</button>
+                <p class="text-center text-sm text-gray-400 mt-4">
+                    已有账号？
+                    <button id="switch-to-login" class="text-cyan-400 hover:text-cyan-300">直接登录</button>
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- Invite Code Modal -->
+    <!-- Invite Modal -->
     <div id="invite-modal" class="fixed inset-0 modal-backdrop z-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">生成邀请码</h3>
-            <p class="text-sm text-gray-500 mb-4">邀请码将在30分钟后自动失效</p>
-            <div id="invite-code-display" class="hidden">
-                <div class="bg-gray-100 rounded-lg p-4 text-center mb-4">
-                    <div id="generated-code" class="text-2xl font-mono font-bold text-blue-600 tracking-wider"></div>
-                    <div id="countdown-timer" class="text-sm text-orange-500 mt-2 countdown"></div>
+        <div class="glass-card rounded-2xl w-full max-w-md mx-4 p-6 glow-border">
+            <h3 class="text-lg font-semibold mb-2">🎁 生成邀请码</h3>
+            <p class="text-sm text-gray-400 mb-4">邀请码 30 分钟后自动失效</p>
+            
+            <div id="invite-code-display" class="hidden mb-4">
+                <div class="bg-black/30 rounded-lg p-4 text-center">
+                    <div id="generated-code" class="text-2xl font-mono font-bold text-cyan-400 tracking-wider"></div>
+                    <div id="countdown-timer" class="text-sm text-orange-400 mt-2 countdown"></div>
                 </div>
-                <button id="copy-invite-code" class="w-full py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                <button id="copy-invite-code" class="w-full py-3 mt-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:opacity-90 transition">
                     <i class="fas fa-copy mr-2"></i>复制邀请码
                 </button>
             </div>
-            <button id="generate-invite-btn" class="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            
+            <button id="generate-invite-btn" class="w-full py-3 cyber-btn rounded-lg font-medium mb-4">
                 生成新邀请码
             </button>
-            <div id="my-invites" class="mt-4 hidden">
-                <h4 class="text-sm font-medium text-gray-700 mb-2">我的邀请记录</h4>
+            
+            <div id="my-invites" class="hidden">
+                <h4 class="text-sm font-medium text-gray-400 mb-2">我的邀请记录</h4>
                 <div id="invites-list" class="space-y-2 max-h-40 overflow-y-auto"></div>
             </div>
-            <button id="close-invite-modal" class="w-full py-2 mt-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+            
+            <button id="close-invite-modal" class="w-full py-3 mt-4 border border-gray-600 rounded-lg hover:bg-gray-800 transition">
                 关闭
             </button>
         </div>
     </div>
 
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-40">
+    <header class="glass-card sticky top-0 z-40 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex items-center justify-between">
                 <div>
-                    <h1 class="text-2xl font-bold text-gray-900">💡 商业点子 & GitHub 热门</h1>
-                    <p class="text-sm text-gray-500 mt-1">每日更新 · 会员专享</p>
+                    <h1 class="text-2xl font-bold glow-text">
+                        <i class="fas fa-rocket mr-2 text-cyan-400"></i>点子 & Trending
+                    </h1>
+                    <p class="text-sm text-gray-400 mt-1">
+                        <span id="last-update"></span>
+                    </p>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button id="invite-btn" class="hidden px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition text-sm">
-                        <i class="fas fa-user-plus mr-2"></i>邀请好友
+                    <button id="invite-btn" class="hidden px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:opacity-90 transition text-sm">
+                        <i class="fas fa-user-plus mr-2"></i>邀请
                     </button>
                     <div id="user-info" class="hidden flex items-center space-x-3">
-                        <span class="text-sm text-gray-600">欢迎, <span id="username-display" class="font-medium"></span></span>
-                        <button id="logout-btn" class="text-sm text-red-600 hover:text-red-700">退出</button>
+                        <span class="text-sm text-gray-300">
+                            <i class="fas fa-user-circle mr-1 text-cyan-400"></i>
+                            <span id="username-display"></span>
+                        </span>
+                        <button id="logout-btn" class="text-sm text-red-400 hover:text-red-300">退出</button>
                     </div>
                 </div>
             </div>
@@ -133,46 +248,60 @@
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Tabs -->
+        <div class="flex gap-2 mb-6 overflow-x-auto">
+            <button class="tab-btn tab-active px-6 py-3 rounded-full font-medium whitespace-nowrap transition" data-tab="all">
+                <i class="fas fa-globe mr-2"></i>全部
+            </button>
+            <button class="tab-btn px-6 py-3 rounded-full font-medium whitespace-nowrap glass-card hover:border-cyan-500/50 transition" data-tab="business">
+                <i class="fas fa-lightbulb mr-2 text-purple-400"></i>商业点子
+            </button>
+            <button class="tab-btn px-6 py-3 rounded-full font-medium whitespace-nowrap glass-card hover:border-cyan-500/50 transition" data-tab="github">
+                <i class="fab fa-github mr-2 text-cyan-400"></i>GitHub项目
+            </button>
+            <button class="tab-btn px-6 py-3 rounded-full font-medium whitespace-nowrap glass-card hover:border-cyan-500/50 transition" data-tab="favorites">
+                <i class="fas fa-heart mr-2 text-pink-400"></i>我的收藏
+            </button>
+        </div>
+
         <!-- Search & Filters -->
-        <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+        <div class="glass-card rounded-xl p-4 mb-6 border border-gray-800">
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="flex-1 relative">
-                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
-                    <input type="text" id="search-input" placeholder="搜索商业点子、GitHub项目..."
-                        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="搜索..."
+                        class="w-full pl-12 pr-4 py-3 rounded-lg">
                 </div>
                 <div class="flex gap-2 flex-wrap">
-                    <select id="type-filter" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-                        <option value="all">全部类型</option>
-                        <option value="business">商业点子</option>
-                        <option value="github">GitHub项目</option>
-                    </select>
-                    <select id="category-filter" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-                        <option value="all">全部分类</option>
-                    </select>
-                    <select id="date-filter" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    <select id="date-filter" class="px-4 py-3 rounded-lg">
                         <option value="all">全部日期</option>
                     </select>
                 </div>
             </div>
-            <div class="flex gap-2 mt-4 flex-wrap" id="tag-filters"></div>
+        </div>
+
+        <!-- Content Stats -->
+        <div class="flex items-center justify-between mb-6 text-sm text-gray-400">
+            <span id="content-count">共 0 条内容</span>
+            <span id="favorites-count" class="hidden">
+                <i class="fas fa-heart text-pink-400 mr-1"></i>
+                收藏 0 条
+            </span>
         </div>
 
         <!-- Content Grid -->
-        <div id="content-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Content will be loaded here -->
-        </div>
+        <div id="content-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
         <!-- Loading State -->
         <div id="loading" class="text-center py-12 hidden">
-            <i class="fas fa-spinner fa-spin text-3xl text-blue-600"></i>
-            <p class="text-gray-500 mt-2">加载中...</p>
+            <i class="fas fa-spinner fa-spin text-4xl text-cyan-400"></i>
+            <p class="text-gray-400 mt-4">加载中...</p>
         </div>
 
         <!-- Empty State -->
         <div id="empty-state" class="text-center py-12 hidden">
-            <i class="fas fa-inbox text-4xl text-gray-300"></i>
-            <p class="text-gray-500 mt-2">暂无数据</p>
+            <i class="fas fa-inbox text-5xl text-gray-600 mb-4"></i>
+            <p class="text-gray-400">暂无内容</p>
         </div>
     </main>
 
