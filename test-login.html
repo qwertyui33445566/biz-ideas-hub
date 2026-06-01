@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录测试</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+    <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">登录测试</h1>
+        
+        <div id="test-results" class="space-y-4">
+            <p class="text-gray-500">正在测试...</p>
+        </div>
+        
+        <div class="mt-6 pt-6 border-t">
+            <a href="index.html" class="block text-center text-blue-600 hover:underline">返回主页面</a>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        const results = document.getElementById('test-results');
+        
+        function addResult(message, success = true) {
+            const div = document.createElement('div');
+            div.className = `p-3 rounded ${success ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`;
+            div.textContent = message;
+            results.appendChild(div);
+        }
+        
+        // 清空初始内容
+        results.innerHTML = '';
+        
+        // 测试1: 创建AuthSystem实例
+        try {
+            const auth = new AuthSystem();
+            addResult('✅ AuthSystem 实例创建成功', true);
+            
+            // 测试2: 检查创始会员是否已创建
+            if (auth.users['郝仕麟']) {
+                addResult('✅ 创始会员 "郝仕麟" 已存在', true);
+            } else {
+                addResult('❌ 创始会员 "郝仕麟" 不存在', false);
+            }
+            
+            // 测试3: 测试登录功能
+            const loginResult = auth.login('郝仕麟', '956244978');
+            if (loginResult.valid) {
+                addResult('✅ 登录成功: ' + loginResult.message, true);
+            } else {
+                addResult('❌ 登录失败: ' + loginResult.message, false);
+            }
+            
+            // 测试4: 检查当前用户
+            if (auth.isLoggedIn()) {
+                addResult('✅ 当前用户: ' + auth.getCurrentUser().username, true);
+            } else {
+                addResult('❌ 未登录状态', false);
+            }
+            
+            // 测试5: 生成邀请码
+            const inviteResult = auth.generateInviteCode();
+            if (inviteResult.valid) {
+                addResult('✅ 邀请码生成成功: ' + inviteResult.code, true);
+            } else {
+                addResult('❌ 邀请码生成失败: ' + inviteResult.message, false);
+            }
+            
+        } catch (error) {
+            addResult('❌ 错误: ' + error.message, false);
+            console.error(error);
+        }
+    </script>
+</body>
+</html>

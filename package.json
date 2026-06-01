@@ -1,0 +1,10 @@
+{
+  "name": "biz-ideas-hub",
+  "version": "1.0.0",
+  "description": "商业点子 & GitHub 热门项目聚合站",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

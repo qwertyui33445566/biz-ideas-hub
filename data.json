@@ -1,0 +1,1526 @@
+{
+  "lastUpdate": "2026-06-01 11:20:00",
+  "dates": [
+    "2026-06-01",
+    "2026-05-31",
+    "2026-05-30",
+    "2026-05-29",
+    "2026-05-28",
+    "2026-05-27",
+    "2026-05-26",
+    "2026-05-25",
+    "2026-05-24",
+    "2026-05-23",
+    "2026-05-22",
+    "2026-05-21",
+    "2026-05-20",
+    "2026-05-19",
+    "2026-05-18",
+    "2026-05-17",
+    "2026-05-16",
+    "2026-05-15",
+    "2026-05-14",
+    "2026-05-13",
+    "2026-05-12",
+    "2026-05-11",
+    "2026-05-10",
+    "2026-05-09",
+    "2026-05-08"
+  ],
+  "entries": [
+    {
+      "type": "business",
+      "date": "2026-06-01",
+      "title": "露营办公桌——数字游民户外工作站",
+      "description": "远程办公常态化催生'户外办公'场景，将露营桌椅与升降桌面、嵌入式充电模块、支架卡槽结合，切中轻户外+移动办公的交叉需求，避开传统休闲露营红海。切入建议：先推一款带Type-C快充+手机/平板支架卡槽的折叠升降桌，主图打'山间开会'场景，投放关键词'户外办公桌''露营升降桌'，客单价锚定200-350元中高端区间。",
+      "tags": ["电商", "户外", "办公", "硬件"],
+      "potential": 4,
+      "actionItems": [
+        "调研户外办公场景真实需求",
+        "找供应链打样折叠升降桌",
+        "拍摄'山间开会'场景主图",
+        "测试京东/淘宝关键词投放"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-06-01",
+      "title": "AI 辅助法律文书生成服务",
+      "description": "针对中小律所和个人律师，提供基于AI的法律文书自动生成服务。涵盖合同起草、诉状生成、法律意见书等。市场痛点：律师80%时间花在文书工作上，AI可提升3-5倍效率。",
+      "tags": ["AI应用", "SaaS", "法律", "服务"],
+      "potential": 4,
+      "actionItems": [
+        "调研现有法律AI产品（如Harvey、CoCounsel）",
+        "与3-5家律所访谈验证需求",
+        "开发MVP：合同生成模块",
+        "申请法律科技相关资质"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-06-01",
+      "title": "银发族短视频内容创业培训",
+      "description": "教退休老人做短视频，分享人生经验、技能教学。抖音/视频号上50+用户增长迅速，但优质内容稀缺。可线上线下结合，收费培训+后续内容孵化分成。",
+      "tags": ["内容", "教育", "银发经济", "短视频"],
+      "potential": 5,
+      "actionItems": [
+        "调研50+用户在抖音的消费习惯",
+        "设计3天线下+30天线上陪跑课程",
+        "找2-3位有潜力的退休老人做案例",
+        "搭建内容分发和变现渠道"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-06-01",
+      "title": "企业AI数字员工外包服务",
+      "description": "为中小企业提供'AI数字员工'外包，替代客服、数据录入、基础运营等岗位。按月收费，比雇佣全职员工成本低60%。",
+      "tags": ["AI应用", "企业服务", "外包", "SaaS"],
+      "potential": 5,
+      "actionItems": [
+        "梳理10个最适合AI替代的标准化岗位",
+        "搭建AI工作流平台（可用Dify/Coze）",
+        "找3家中小企业试点",
+        "设计SLA和收费模式"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-06-01",
+      "name": "microsoft/TypeAgent",
+      "author": "microsoft",
+      "avatar": "https://github.com/microsoft.png",
+      "url": "https://github.com/microsoft/TypeAgent",
+      "description": "微软开源的AI Agent框架，支持类型安全的智能体开发。亮点：强类型约束、多Agent协作、与TypeScript生态深度集成。",
+      "language": "TypeScript",
+      "stars": 4520,
+      "forks": 280,
+      "topics": ["ai", "agent", "typescript", "llm"]
+    },
+    {
+      "type": "github",
+      "date": "2026-06-01",
+      "name": "anthropics/prompt-eng-interactive",
+      "author": "anthropics",
+      "avatar": "https://github.com/anthropics.png",
+      "url": "https://github.com/anthropics/prompt-eng-interactive",
+      "description": "Anthropic推出的交互式提示工程教程。通过实际案例教用户如何写出更好的Prompt，包含大量Claude 3的最佳实践。",
+      "language": "Python",
+      "stars": 8230,
+      "forks": 620,
+      "topics": ["prompt-engineering", "llm", "claude", "tutorial"]
+    },
+    {
+      "type": "github",
+      "date": "2026-06-01",
+      "name": "maybe-finance/maybe",
+      "author": "maybe-finance",
+      "avatar": "https://github.com/maybe-finance.png",
+      "url": "https://github.com/maybe-finance/maybe",
+      "description": "开源的个人财务管理工具，支持多账户聚合、投资组合追踪、财务规划。可自托管，数据完全私有。对标Mint.com的替代品。",
+      "language": "Ruby",
+      "stars": 28900,
+      "forks": 2100,
+      "topics": ["finance", "personal-finance", "self-hosted", "ruby"]
+    },
+    {
+      "type": "github",
+      "date": "2026-06-01",
+      "name": "comfyanonymous/ComfyUI",
+      "author": "comfyanonymous",
+      "avatar": "https://github.com/comfyanonymous.png",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "description": "基于节点的Stable Diffusion图形界面，支持复杂工作流设计。最近更新支持了更多视频生成模型，成为AI生图/生视频的首选工具。",
+      "language": "Python",
+      "stars": 61200,
+      "forks": 6500,
+      "topics": ["stable-diffusion", "ai", "image-generation", "workflow"]
+    },
+    {
+      "type": "github",
+      "date": "2026-06-01",
+      "name": "lobehub/lobe-chat",
+      "author": "lobehub",
+      "avatar": "https://github.com/lobehub.png",
+      "url": "https://github.com/lobehub/lobe-chat",
+      "description": "开源的AI聊天框架，支持多模型（OpenAI/Claude/Gemini等）、插件系统、知识库。界面美观，支持PWA，可作为ChatGPT的开源自托管替代。",
+      "language": "TypeScript",
+      "stars": 45600,
+      "forks": 9800,
+      "topics": ["chatgpt", "llm", "open-source", "nextjs"]
+    },
+    {
+      "type": "github",
+      "date": "2026-06-01",
+      "name": "rustdesk/rustdesk",
+      "author": "rustdesk",
+      "avatar": "https://github.com/rustdesk.png",
+      "url": "https://github.com/rustdesk/rustdesk",
+      "description": "开源远程桌面软件，TeamViewer的开源替代品。支持Windows/Mac/Linux/Android/iOS，可自建服务器，数据不走第三方。",
+      "language": "Rust",
+      "stars": 78900,
+      "forks": 11200,
+      "topics": ["remote-desktop", "rust", "self-hosted", "teamviewer"]
+    },
+    {
+      "type": "github",
+      "date": "2026-06-01",
+      "name": "n8n-io/n8n",
+      "author": "n8n-io",
+      "avatar": "https://github.com/n8n-io.png",
+      "url": "https://github.com/n8n-io/n8n",
+      "description": "开源工作流自动化工具，Zapier的替代方案。支持400+集成，可视化编排，可自托管。最近AI Agent节点功能让热度再次飙升。",
+      "language": "TypeScript",
+      "stars": 56800,
+      "forks": 8900,
+      "topics": ["automation", "workflow", "ai-agent", "integration"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-31",
+      "title": "跨境电商AI客服外包",
+      "description": "为亚马逊、Shopify卖家提供24/7 AI客服服务。解决时差问题，降低客服成本。支持多语言（英/西/德/法等），可处理80%常见咨询。",
+      "tags": ["电商", "AI应用", "跨境", "服务"],
+      "potential": 4,
+      "actionItems": [
+        "调研跨境电商卖家客服痛点",
+        "训练多语言电商客服模型",
+        "接入Amazon SP-API和Shopify",
+        "设计按咨询量计费模式"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-31",
+      "title": "AI生成儿童绘本服务",
+      "description": "家长输入故事主题，AI生成完整绘本（文字+插图）。可打印成实体书或电子书。市场：个性化儿童内容需求大，家长愿为独特故事付费。",
+      "tags": ["AI应用", "内容", "儿童", "教育"],
+      "potential": 3,
+      "actionItems": [
+        "调研儿童绘本市场规模",
+        "搭建AI生图+生文工作流",
+        "设计绘本模板和风格",
+        "找幼儿园/家长社群验证"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-31",
+      "name": "langgenius/dify",
+      "author": "langgenius",
+      "avatar": "https://github.com/langgenius.png",
+      "url": "https://github.com/langgenius/dify",
+      "description": "开源LLM应用开发平台，支持工作流编排、RAG知识库、Agent开发。可视化界面，非技术人员也能快速搭建AI应用。",
+      "language": "TypeScript",
+      "stars": 52300,
+      "forks": 7600,
+      "topics": ["llm", "rag", "ai-agent", "workflow"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-31",
+      "name": "appwrite/appwrite",
+      "author": "appwrite",
+      "avatar": "https://github.com/appwrite.png",
+      "url": "https://github.com/appwrite/appwrite",
+      "description": "开源Firebase替代方案，提供后端即服务（BaaS）。包含认证、数据库、存储、函数等，支持多平台SDK。适合快速开发应用。",
+      "language": "TypeScript",
+      "stars": 45600,
+      "forks": 4200,
+      "topics": ["backend", "baas", "firebase-alternative", "serverless"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-30",
+      "title": "AI 驱动的个性化营养订阅服务",
+      "description": "基于用户的基因数据、健康指标和饮食偏好，AI生成个性化营养方案，并定期配送定制营养包。目标人群：注重健康的中高收入人群。",
+      "tags": ["AI应用", "健康", "订阅制", "DTC"],
+      "potential": 4,
+      "actionItems": [
+        "调研个性化营养市场现状",
+        "与营养师合作设计算法",
+        "找供应链合作伙伴",
+        "设计订阅定价模型"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-30",
+      "title": "小型企业AI合规助手",
+      "description": "帮助中小企业自动完成税务申报、工商年检、劳动合同合规检查等。AI自动抓取政策变化，提醒企业及时更新。",
+      "tags": ["AI应用", "企业服务", "合规", "SaaS"],
+      "potential": 5,
+      "actionItems": [
+        "梳理企业常见合规需求",
+        "对接政府公开数据接口",
+        "开发合规检查引擎",
+        "找10家企业试用"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-30",
+      "name": "shadcn-ui/ui",
+      "author": "shadcn-ui",
+      "avatar": "https://github.com/shadcn-ui.png",
+      "url": "https://github.com/shadcn-ui/ui",
+      "description": "设计精美的React组件库，可直接复制代码使用。不依赖npm包，完全可控。与Tailwind CSS完美配合，成为2024年最受欢迎的前端UI方案。",
+      "language": "TypeScript",
+      "stars": 82300,
+      "forks": 5200,
+      "topics": ["react", "ui-components", "tailwindcss", "design-system"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-30",
+      "name": "oven-sh/bun",
+      "author": "oven-sh",
+      "avatar": "https://github.com/oven-sh.png",
+      "url": "https://github.com/oven-sh/bun",
+      "description": "极速JavaScript运行时，内置打包器、转译器、包管理器。比Node.js快3倍，内存占用更低。支持TypeScript/JSX直接运行。",
+      "language": "Zig",
+      "stars": 75600,
+      "forks": 2800,
+      "topics": ["javascript", "runtime", "bundler", "zig"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-29",
+      "title": "本地生活服务AI比价平台",
+      "description": "聚合外卖、打车、家政等本地服务，AI实时比价推荐最优选择。用户省时间省钱，平台赚佣金。",
+      "tags": ["本地生活", "AI应用", "比价", "平台"],
+      "potential": 4,
+      "actionItems": [
+        "调研本地服务API开放情况",
+        "开发比价算法",
+        "设计用户激励机制",
+        "从单一城市启动"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-29",
+      "title": "AI辅助简历优化与面试模拟",
+      "description": "针对求职者，提供AI简历优化、岗位匹配、模拟面试服务。可对接企业HR端，实现双向推荐。",
+      "tags": ["AI应用", "招聘", "教育", "求职"],
+      "potential": 4,
+      "actionItems": [
+        "分析招聘平台数据",
+        "训练简历评估模型",
+        "开发模拟面试功能",
+        "与企业HR建立合作"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-29",
+      "title": "宠物AI健康监测设备",
+      "description": "智能项圈+AI分析，监测宠物活动量、睡眠质量、情绪状态。异常时提醒主人，生成健康报告。",
+      "tags": ["宠物", "IoT", "AI应用", "硬件"],
+      "potential": 3,
+      "actionItems": [
+        "调研宠物智能硬件市场",
+        "设计硬件原型",
+        "开发AI健康分析模型",
+        "找宠物医院合作验证"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-29",
+      "name": "facebook/react",
+      "author": "facebook",
+      "avatar": "https://github.com/facebook.png",
+      "url": "https://github.com/facebook/react",
+      "description": "Meta开源的JavaScript库，用于构建用户界面。组件化、虚拟DOM、单向数据流，前端开发的事实标准。",
+      "language": "JavaScript",
+      "stars": 231000,
+      "forks": 48000,
+      "topics": ["javascript", "ui", "frontend", "react"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-29",
+      "name": "golang/go",
+      "author": "golang",
+      "avatar": "https://github.com/golang.png",
+      "url": "https://github.com/golang/go",
+      "description": "Google开源的编程语言，以简洁、高效、并发友好著称。内置goroutine和channel，适合云原生、微服务、基础设施开发。",
+      "language": "Go",
+      "stars": 124000,
+      "forks": 17500,
+      "topics": ["go", "programming-language", "concurrency", "cloud-native"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-28",
+      "name": "torvalds/linux",
+      "author": "torvalds",
+      "avatar": "https://github.com/torvalds.png",
+      "url": "https://github.com/torvalds/linux",
+      "description": "Linux内核源代码，由Linus Torvalds创建。全球最流行的开源操作系统内核，支撑服务器、嵌入式、移动设备等。",
+      "language": "C",
+      "stars": 189000,
+      "forks": 55000,
+      "topics": ["linux", "kernel", "c", "operating-system"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-28",
+      "name": "vercel/next.js",
+      "author": "vercel",
+      "avatar": "https://github.com/vercel.png",
+      "url": "https://github.com/vercel/next.js",
+      "description": "React全栈框架，支持SSR/SSG/ISR。内置路由、API路由、图片优化。Vercel出品，现代Web开发首选框架。",
+      "language": "TypeScript",
+      "stars": 127000,
+      "forks": 27000,
+      "topics": ["react", "ssr", "nextjs", "framework"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-27",
+      "title": "AI 驱动的跨境电商选品工具",
+      "description": "利用AI分析亚马逊、Temu、1688等平台数据，自动发现高利润、低竞争的选品机会。目标用户：跨境电商卖家。",
+      "tags": ["AI应用", "电商", "跨境", "SaaS"],
+      "potential": 5,
+      "actionItems": [
+        "爬取主流电商平台公开数据",
+        "训练选品推荐模型",
+        "设计利润计算器",
+        "找10个跨境卖家试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-27",
+      "title": "新能源汽车配件跨境电商",
+      "description": "针对欧美市场，销售新能源汽车周边配件（充电桩适配器、车载收纳、内饰改装）。新能源汽车渗透率提升，配件需求爆发。",
+      "tags": ["电商", "跨境", "新能源", "硬件"],
+      "potential": 4,
+      "actionItems": [
+        "调研欧美新能源车配件热销品类",
+        "找国内供应链（深圳/宁波）",
+        "注册亚马逊/Ebay店铺",
+        "小批量测款验证"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-27",
+      "name": "kubernetes/kubernetes",
+      "author": "kubernetes",
+      "avatar": "https://github.com/kubernetes.png",
+      "url": "https://github.com/kubernetes/kubernetes",
+      "description": "Google开源的容器编排平台，自动化部署、扩展和管理容器化应用。云原生事实标准，支撑全球大部分微服务架构。",
+      "language": "Go",
+      "stars": 112000,
+      "forks": 39000,
+      "topics": ["kubernetes", "containers", "orchestration", "cloud-native"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-27",
+      "name": "microsoft/vscode",
+      "author": "microsoft",
+      "avatar": "https://github.com/microsoft.png",
+      "url": "https://github.com/microsoft/vscode",
+      "description": "微软开源的代码编辑器，支持丰富的插件生态。内置Git、调试器、智能提示。全球开发者最流行的IDE之一。",
+      "language": "TypeScript",
+      "stars": 165000,
+      "forks": 29000,
+      "topics": ["editor", "ide", "typescript", "microsoft"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-26",
+      "title": "AI 生成短视频脚本服务",
+      "description": "为抖音/视频号创作者提供AI脚本生成服务。输入主题，AI输出完整脚本（含分镜、台词、BGM建议）。按月订阅收费。",
+      "tags": ["AI应用", "内容", "短视频", "SaaS"],
+      "potential": 4,
+      "actionItems": [
+        "调研创作者脚本需求痛点",
+        "训练短视频脚本生成模型",
+        "设计分镜模板库",
+        "找10个创作者试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-26",
+      "title": "智能农业无人机服务",
+      "description": "提供农田测绘、病虫害监测、精准施药等无人机服务。按亩收费，降低小农户使用高科技门槛。",
+      "tags": ["AI应用", "农业", "硬件", "服务"],
+      "potential": 3,
+      "actionItems": [
+        "调研农业无人机政策和市场",
+        "采购/租赁多旋翼无人机",
+        "培训飞手和农业专家",
+        "与农业合作社建立合作"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-26",
+      "name": "rust-lang/rust",
+      "author": "rust-lang",
+      "avatar": "https://github.com/rust-lang.png",
+      "url": "https://github.com/rust-lang/rust",
+      "description": "Mozilla开发的系统编程语言，以内存安全和高性能著称。零成本抽象，无GC，适合系统、嵌入式、WebAssembly开发。",
+      "language": "Rust",
+      "stars": 98000,
+      "forks": 13000,
+      "topics": ["rust", "programming-language", "systems", "memory-safety"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-26",
+      "name": "tensorflow/tensorflow",
+      "author": "tensorflow",
+      "avatar": "https://github.com/tensorflow.png",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "description": "Google开源的机器学习框架，支持深度学习模型训练和部署。提供Python/C++ API，支持CPU/GPU/TPU。",
+      "language": "Python",
+      "stars": 186000,
+      "forks": 74000,
+      "topics": ["machine-learning", "deep-learning", "python", "google"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-25",
+      "title": "老年人智能陪伴机器人",
+      "description": "针对独居老人，提供语音交互、健康提醒、紧急呼叫、视频通话等功能的桌面机器人。解决老龄化社会陪伴需求。",
+      "tags": ["AI应用", "银发经济", "硬件", "IoT"],
+      "potential": 4,
+      "actionItems": [
+        "调研老年人对智能设备接受度",
+        "设计简单易用的交互界面",
+        "集成健康监测传感器",
+        "与社区/养老机构合作推广"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-25",
+      "title": "AI 代码审查助手",
+      "description": "为开发团队提供AI代码审查服务，自动发现bug、安全漏洞、性能问题。可集成GitHub/GitLab CI/CD流程。",
+      "tags": ["AI应用", "开发者工具", "SaaS", "安全"],
+      "potential": 4,
+      "actionItems": [
+        "调研开发团队代码审查痛点",
+        "训练代码审查模型",
+        "开发GitHub/GitLab插件",
+        "找5个技术团队试用"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-25",
+      "name": "nodejs/node",
+      "author": "nodejs",
+      "avatar": "https://github.com/nodejs.png",
+      "url": "https://github.com/nodejs/node",
+      "description": "Chrome V8引擎驱动的JavaScript运行时，让JS可以在服务器端运行。事件驱动、非阻塞I/O，适合高并发应用。",
+      "language": "JavaScript",
+      "stars": 107000,
+      "forks": 29000,
+      "topics": ["javascript", "runtime", "server", "v8"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-25",
+      "name": "vuejs/vue",
+      "author": "vuejs",
+      "avatar": "https://github.com/vuejs.png",
+      "url": "https://github.com/vuejs/vue",
+      "description": "渐进式JavaScript框架，易学易用，性能优秀。双向数据绑定、组件化开发，适合中小型项目和快速原型。",
+      "language": "TypeScript",
+      "stars": 208000,
+      "forks": 35000,
+      "topics": ["javascript", "framework", "vue", "frontend"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-24",
+      "title": "宠物殡葬服务电商化",
+      "description": "将宠物殡葬服务标准化、电商化。提供在线预约、遗体接送、火化、骨灰盒定制、纪念品制作等一站式服务。",
+      "tags": ["宠物", "电商", "服务", "DTC"],
+      "potential": 4,
+      "actionItems": [
+        "调研宠物殡葬市场规模和法规",
+        "设计服务套餐和定价",
+        "建立火化合作网点",
+        "通过小红书/抖音获客"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-24",
+      "title": "AI 驱动的个性化健身计划",
+      "description": "基于用户身体数据、健身目标、时间安排，AI生成个性化训练计划和饮食建议。可对接智能手表数据。",
+      "tags": ["AI应用", "健康", "SaaS", "订阅制"],
+      "potential": 3,
+      "actionItems": [
+        "调研健身App市场现状",
+        "设计AI训练计划算法",
+        "开发App MVP",
+        "找健身教练验证计划质量"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-24",
+      "name": "python/cpython",
+      "author": "python",
+      "avatar": "https://github.com/python.png",
+      "url": "https://github.com/python/cpython",
+      "description": "Python编程语言的官方实现。简洁优雅的语法，丰富的标准库，AI/数据科学/Web开发的首选语言。",
+      "language": "Python",
+      "stars": 62000,
+      "forks": 30000,
+      "topics": ["python", "programming-language", "interpreter", "cpython"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-24",
+      "name": "django/django",
+      "author": "django",
+      "avatar": "https://github.com/django.png",
+      "url": "https://github.com/django/django",
+      "description": "Python高级Web框架，强调快速开发和简洁实用。内置ORM、认证、管理后台，适合构建稳健的Web应用。",
+      "language": "Python",
+      "stars": 82000,
+      "forks": 32000,
+      "topics": ["python", "web-framework", "django", "backend"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-23",
+      "title": "AI 驱动的跨境电商文案生成",
+      "description": "为跨境电商卖家自动生成多语言产品文案（标题、描述、卖点）。支持亚马逊、Temu、Shopee等平台格式。",
+      "tags": ["AI应用", "电商", "跨境", "SaaS"],
+      "potential": 4,
+      "actionItems": [
+        "调研卖家文案撰写痛点",
+        "训练多语言电商文案模型",
+        "开发各平台格式适配器",
+        "设计按字数/条数计费模式"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-23",
+      "title": "智能家居安装服务",
+      "description": "为普通家庭提供智能家居设备安装和调试服务（智能门锁、灯具、窗帘、安防等）。解决用户'买了不会装'的痛点。",
+      "tags": ["智能家居", "服务", "IoT", "本地生活"],
+      "potential": 3,
+      "actionItems": [
+        "调研主流智能家居品牌兼容性",
+        "培训安装技师团队",
+        "设计标准化安装流程",
+        "与家电卖场/电商合作获客"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-23",
+      "name": "apache/spark",
+      "author": "apache",
+      "avatar": "https://github.com/apache.png",
+      "url": "https://github.com/apache/spark",
+      "description": "Apache开源的大数据处理引擎，支持批处理和流处理。比Hadoop MapReduce快100倍，支持SQL/ML/图计算。",
+      "language": "Scala",
+      "stars": 40000,
+      "forks": 28000,
+      "topics": ["big-data", "spark", "scala", "analytics"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-23",
+      "name": "redis/redis",
+      "author": "redis",
+      "avatar": "https://github.com/redis.png",
+      "url": "https://github.com/redis/redis",
+      "description": "高性能键值存储数据库，支持多种数据结构。常用于缓存、消息队列、实时排行榜。单线程但性能极高。",
+      "language": "C",
+      "stars": 67000,
+      "forks": 24000,
+      "topics": ["database", "cache", "redis", "nosql"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-22",
+      "title": "AI 驱动的财务自动化工具",
+      "description": "为小微企业提供AI记账、发票识别、自动对账、税务提醒等服务。替代传统会计，降低财务管理成本。",
+      "tags": ["AI应用", "企业服务", "SaaS", "财务"],
+      "potential": 4,
+      "actionItems": [
+        "调研小微企业财务管理痛点",
+        "开发发票OCR和自动分类",
+        "对接银行流水自动对账",
+        "申请财税服务资质"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-22",
+      "title": "户外露营装备租赁平台",
+      "description": "针对偶尔露营的用户，提供帐篷、睡袋、炊具等装备租赁服务。按天计费，同城配送/自提。降低露营门槛。",
+      "tags": ["户外", "平台", "租赁", "本地生活"],
+      "potential": 3,
+      "actionItems": [
+        "调研本地露营装备租赁需求",
+        "采购基础装备库存",
+        "开发小程序预约系统",
+        "与露营地合作推广"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-22",
+      "name": "git/git",
+      "author": "git",
+      "avatar": "https://github.com/git.png",
+      "url": "https://github.com/git/git",
+      "description": "Linus Torvalds创建的分布式版本控制系统。全球开发者协作的标准工具，支持分支、合并、回滚等高级功能。",
+      "language": "C",
+      "stars": 53000,
+      "forks": 26000,
+      "topics": ["git", "version-control", "vcs", "scm"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-22",
+      "name": "nginx/nginx",
+      "author": "nginx",
+      "avatar": "https://github.com/nginx.png",
+      "url": "https://github.com/nginx/nginx",
+      "description": "高性能HTTP和反向代理服务器。事件驱动架构，内存占用低，可处理高并发连接。全球最流行的Web服务器之一。",
+      "language": "C",
+      "stars": 22000,
+      "forks": 6500,
+      "topics": ["nginx", "web-server", "proxy", "load-balancer"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-21",
+      "title": "AI 生成电商主图服务",
+      "description": "为电商卖家提供AI生成产品主图服务。输入产品图和需求，AI生成多场景、多风格的高质量主图。按张收费。",
+      "tags": ["AI应用", "电商", "设计", "服务"],
+      "potential": 4,
+      "actionItems": [
+        "调研卖家主图设计痛点",
+        "搭建AI生图工作流",
+        "设计场景模板库",
+        "找10个卖家试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-21",
+      "title": "跨境物流比价平台",
+      "description": "聚合多家跨境物流商（DHL、FedEx、专线等），AI根据包裹属性推荐最优物流方案。帮助卖家降低物流成本。",
+      "tags": ["电商", "跨境", "物流", "平台"],
+      "potential": 4,
+      "actionItems": [
+        "调研跨境物流市场格局",
+        "对接物流商API获取报价",
+        "开发比价算法",
+        "设计按单抽佣模式"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-21",
+      "name": "rtk-ai/rtk",
+      "author": "rtk-ai",
+      "avatar": "https://github.com/rtk-ai.png",
+      "url": "https://github.com/rtk-ai/rtk",
+      "description": "CLI代理大幅降低LLM令牌消耗，常用开发命令减少60-90%。Rust编写的高性能AI命令行工具。",
+      "language": "Rust",
+      "stars": 51725,
+      "forks": 2100,
+      "topics": ["ai", "cli", "rust", "llm"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-21",
+      "name": "Imbad0202/academic-research-skills",
+      "author": "Imbad0202",
+      "avatar": "https://github.com/Imbad0202.png",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "description": "Claude Code学术研究技能包，覆盖论文全流程。从文献综述到实验设计，提升学术研究效率。",
+      "language": "Python",
+      "stars": 15590,
+      "forks": 890,
+      "topics": ["academic", "research", "claude", "ai"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-21",
+      "name": "colbymchenry/codegraph",
+      "author": "colbymchenry",
+      "avatar": "https://github.com/colbymchenry.png",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "description": "Claude Code预索引代码知识图谱。通过构建代码知识图谱，让AI更好地理解和导航大型代码库。",
+      "language": "TypeScript",
+      "stars": 8491,
+      "forks": 420,
+      "topics": ["code-analysis", "knowledge-graph", "ai", "developer-tools"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-20",
+      "title": "AI 驱动的客户流失预警系统",
+      "description": "为SaaS和电商企业提供客户流失预警。AI分析用户行为数据，提前识别高风险客户，自动触发挽留策略。",
+      "tags": ["AI应用", "SaaS", "企业服务", "数据分析"],
+      "potential": 4,
+      "actionItems": [
+        "调研客户流失预警市场需求",
+        "设计用户行为特征工程",
+        "训练流失预测模型",
+        "开发自动化挽留工作流"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-20",
+      "title": "小众运动装备DTC品牌",
+      "description": "针对飞盘、桨板、陆冲等小众运动，打造垂直DTC品牌。通过内容营销建立社区，避开大品牌竞争。",
+      "tags": ["DTC", "电商", "运动", "品牌"],
+      "potential": 3,
+      "actionItems": [
+        "选择1-2个小众运动深入调研",
+        "设计差异化产品",
+        "建立小红书/抖音内容矩阵",
+        "小批量生产测试市场"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-20",
+      "name": "msitarzewski/agency-agents",
+      "author": "msitarzewski",
+      "avatar": "https://github.com/msitarzewski.png",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "description": "完整AI机构工具箱，每个Agent都是拥有个性、流程和可交付成果的专业专家。超10万星，概念新颖。",
+      "language": null,
+      "stars": 101160,
+      "forks": 5200,
+      "topics": ["ai", "agents", "automation", "agency"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-20",
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "author": "ZhuLinsen",
+      "avatar": "https://github.com/ZhuLinsen.png",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM驱动的A/H/美股智能分析系统，零成本自动运行。与中文用户高度相关（A股+港股）。",
+      "language": "Python",
+      "stars": 37764,
+      "forks": 2100,
+      "topics": ["stock", "analysis", "llm", "finance"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-20",
+      "name": "HKUDS/CLI-Anything",
+      "author": "HKUDS",
+      "avatar": "https://github.com/HKUDS.png",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "让所有软件代理原生化，香港大学出品。学术机构出品，创新性强。",
+      "language": "Python",
+      "stars": 37506,
+      "forks": 1800,
+      "topics": ["cli", "agents", "hkust", "ai"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-19",
+      "title": "AI 驱动的供应链优化工具",
+      "description": "为中小制造企业提供AI供应链优化服务。预测需求、优化库存、降低缺货率。按SKU数量收费。",
+      "tags": ["AI应用", "企业服务", "供应链", "SaaS"],
+      "potential": 5,
+      "actionItems": [
+        "调研中小制造企业供应链痛点",
+        "开发需求预测模型",
+        "设计库存优化算法",
+        "找3家工厂试点"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-19",
+      "title": "宠物鲜食订阅服务",
+      "description": "为宠物提供新鲜、定制化的鲜食配送。根据宠物品种、年龄、健康状况定制食谱，每周配送。",
+      "tags": ["宠物", "DTC", "订阅制", "健康"],
+      "potential": 4,
+      "actionItems": [
+        "调研宠物鲜食市场规模",
+        "设计营养均衡的食谱",
+        "建立中央厨房和冷链配送",
+        "通过宠物社群获客"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-19",
+      "name": "farion1231/cc-switch",
+      "author": "farion1231",
+      "avatar": "https://github.com/farion1231.png",
+      "url": "https://github.com/farion1231/cc-switch",
+      "description": "跨平台桌面一站式AI助手工具，同时管理Claude Code、Codex和Gemini CLI。星数高，实用性强。",
+      "language": "TypeScript",
+      "stars": 73365,
+      "forks": 3100,
+      "topics": ["ai", "desktop", "claude", "codex"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-19",
+      "name": "ruvnet/wifi-densepose",
+      "author": "ruvnet",
+      "avatar": "https://github.com/ruvnet.png",
+      "url": "https://github.com/ruvnet/wifi-densepose",
+      "description": "基于WiFi信号的密集人体姿态估计系统，穿透墙壁实现实时追踪。技术前沿创新。",
+      "language": "Python",
+      "stars": 58992,
+      "forks": 2400,
+      "topics": ["wifi", "pose-estimation", "ai", "computer-vision"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-19",
+      "name": "NoeFabris/opencode-antigravity-auth",
+      "author": "NoeFabris",
+      "avatar": "https://github.com/NoeFabris.png",
+      "url": "https://github.com/NoeFabris/opencode-antigravity-auth",
+      "description": "OpenCode通过OAuth接入Google Antigravity IDE，访问Gemini Pro和Claude Opus。当日trending项目，增长势头最猛。",
+      "language": "TypeScript",
+      "stars": 10538,
+      "forks": 680,
+      "topics": ["oauth", "ide", "gemini", "claude"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-18",
+      "title": "AI 驱动的舆情监控系统",
+      "description": "为企业提供品牌舆情监控服务。实时监控社交媒体、新闻、论坛，AI分析情感倾向，预警负面舆情。",
+      "tags": ["AI应用", "企业服务", "SaaS", "营销"],
+      "potential": 4,
+      "actionItems": [
+        "调研企业舆情监控需求",
+        "开发多平台数据采集",
+        "训练情感分析模型",
+        "设计预警和报告系统"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-18",
+      "title": "智能家居安防套装",
+      "description": "针对租房人群，提供免安装的智能家居安防套装（门窗传感器、摄像头、报警器）。即插即用，搬家可带走。",
+      "tags": ["智能家居", "安防", "硬件", "租赁"],
+      "potential": 3,
+      "actionItems": [
+        "调研租房人群安防需求",
+        "设计免安装产品方案",
+        "找OEM厂商代工",
+        "通过租房平台推广"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-18",
+      "name": "obra/superpowers",
+      "author": "obra",
+      "avatar": "https://github.com/obra.png",
+      "url": "https://github.com/obra/superpowers",
+      "description": "Claude Code超能力核心技能库。扩展Claude Code的功能，提升开发效率。",
+      "language": "Shell",
+      "stars": 194872,
+      "forks": 8900,
+      "topics": ["claude", "skills", "developer-tools", "ai"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-18",
+      "name": "affaan-m/everything-claude-code",
+      "author": "affaan-m",
+      "avatar": "https://github.com/affaan-m.png",
+      "url": "https://github.com/affaan-m/everything-claude-code",
+      "description": "AI代理性能优化系统。提升Claude Code在各种场景下的性能和响应速度。",
+      "language": "JavaScript",
+      "stars": 185413,
+      "forks": 7600,
+      "topics": ["claude", "performance", "optimization", "ai"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-18",
+      "name": "forrestchang/andrej-karpathy-skills",
+      "author": "forrestchang",
+      "avatar": "https://github.com/forrestchang.png",
+      "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+      "description": "改进Claude Code行为的配置文件。基于Andrej Karpathy的经验，优化AI代码助手的表现。",
+      "language": null,
+      "stars": 133643,
+      "forks": 5200,
+      "topics": ["claude", "configuration", "ai", "developer-tools"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-17",
+      "title": "AI 驱动的招聘筛选系统",
+      "description": "为企业提供AI简历筛选和面试初筛服务。自动匹配岗位需求，生成候选人评分报告。降低HR工作量70%。",
+      "tags": ["AI应用", "企业服务", "招聘", "SaaS"],
+      "potential": 4,
+      "actionItems": [
+        "调研HR简历筛选痛点",
+        "训练简历匹配模型",
+        "开发评分和报告系统",
+        "找5家企业试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-17",
+      "title": "户外露营主题咖啡车",
+      "description": "将咖啡车与露营主题结合，在露营地、公园、户外活动场所提供服务。售卖咖啡、简餐、露营小物。",
+      "tags": ["户外", "餐饮", "咖啡", "本地生活"],
+      "potential": 3,
+      "actionItems": [
+        "调研露营地咖啡需求",
+        "改装咖啡车",
+        "设计露营主题菜单",
+        "申请流动摊贩许可"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-17",
+      "name": "tailwindlabs/tailwindcss",
+      "author": "tailwindlabs",
+      "avatar": "https://github.com/tailwindlabs.png",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "description": "实用优先的CSS框架，通过原子类快速构建现代界面。高度可定制，无需离开HTML即可设计。",
+      "language": "TypeScript",
+      "stars": 85000,
+      "forks": 4300,
+      "topics": ["css", "framework", "tailwind", "frontend"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-17",
+      "name": "prisma/prisma",
+      "author": "prisma",
+      "avatar": "https://github.com/prisma.png",
+      "url": "https://github.com/prisma/prisma",
+      "description": "下一代Node.js和TypeScript ORM。类型安全、自动迁移、可视化数据管理。简化数据库操作。",
+      "language": "TypeScript",
+      "stars": 41000,
+      "forks": 1600,
+      "topics": ["orm", "database", "typescript", "nodejs"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-16",
+      "title": "AI 驱动的定价优化工具",
+      "description": "为电商和零售企业提供动态定价服务。AI分析竞品价格、库存、需求，自动调整价格最大化利润。",
+      "tags": ["AI应用", "电商", "SaaS", "定价"],
+      "potential": 5,
+      "actionItems": [
+        "调研动态定价市场需求",
+        "开发竞品价格监控",
+        "设计定价优化算法",
+        "找3家电商试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-16",
+      "title": "露营主题亲子活动服务",
+      "description": "组织露营主题的亲子户外活动（野外生存、星空观测、自然教育）。按家庭收费，提供全套装备和教练。",
+      "tags": ["户外", "教育", "亲子", "服务"],
+      "potential": 3,
+      "actionItems": [
+        "调研亲子户外活动市场",
+        "设计活动课程体系",
+        "采购儿童安全装备",
+        "与学校/社区合作推广"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-16",
+      "name": "NousResearch/hermes-agent",
+      "author": "NousResearch",
+      "avatar": "https://github.com/NousResearch.png",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "与你一起成长的AI代理框架，Nous Research出品。支持24+模型供应商、15+通信渠道、自主技能创建和跨会话记忆。",
+      "language": "Python",
+      "stars": 151609,
+      "forks": 6200,
+      "topics": ["ai", "agent", "framework", "llm"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-16",
+      "name": "github/spec-kit",
+      "author": "github",
+      "avatar": "https://github.com/github.png",
+      "url": "https://github.com/github/spec-kit",
+      "description": "规范驱动开发工具包，GitHub官方出品。帮助开发者从规范开始进行驱动开发。",
+      "language": "Python",
+      "stars": 100041,
+      "forks": 3800,
+      "topics": ["specification", "development", "github", "tools"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-16",
+      "name": "ruvnet/RuView",
+      "author": "ruvnet",
+      "avatar": "https://github.com/ruvnet.png",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "基于WiFi信号的实时人体姿态估计和生命体征监测，无需摄像头即可穿透墙壁进行跟踪。创新性技术项目。",
+      "language": "Rust",
+      "stars": 57139,
+      "forks": 2100,
+      "topics": ["wifi", "health", "monitoring", "privacy"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-15",
+      "title": "AI 驱动的内容审核服务",
+      "description": "为UGC平台提供AI内容审核服务。自动识别违规内容（色情、暴力、政治敏感），降低人工审核成本。",
+      "tags": ["AI应用", "SaaS", "内容", "安全"],
+      "potential": 4,
+      "actionItems": [
+        "调研内容审核市场需求",
+        "训练多模态审核模型",
+        "开发实时审核API",
+        "找社区/论坛试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-15",
+      "title": "露营装备测评自媒体",
+      "description": "专注露营装备的测评和推荐自媒体。通过真实测评建立信任，通过 affiliate 链接和广告变现。",
+      "tags": ["内容", "户外", "自媒体", "电商"],
+      "potential": 3,
+      "actionItems": [
+        "确定测评品类和风格",
+        "建立各平台账号矩阵",
+        "采购测评样品",
+        "对接电商联盟"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-15",
+      "name": "anthropics/claude-code",
+      "author": "anthropics",
+      "avatar": "https://github.com/anthropics.png",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "Anthropic官方的AI编程助手。深度集成Claude模型，支持代码生成、重构、调试、测试等全流程开发。",
+      "language": "TypeScript",
+      "stars": 45000,
+      "forks": 1800,
+      "topics": ["ai", "coding", "claude", "developer-tools"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-15",
+      "name": "openai/whisper",
+      "author": "openai",
+      "avatar": "https://github.com/openai.png",
+      "url": "https://github.com/openai/whisper",
+      "description": "OpenAI开源的自动语音识别系统。支持多语言、多任务，准确率接近人类水平。可用于转录、翻译等。",
+      "language": "Python",
+      "stars": 72000,
+      "forks": 8500,
+      "topics": ["speech-recognition", "ai", "openai", "audio"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-14",
+      "title": "AI 驱动的智能客服训练平台",
+      "description": "帮助企业快速训练专属AI客服。上传历史对话数据，自动训练模型，无需编程。按对话量收费。",
+      "tags": ["AI应用", "企业服务", "SaaS", "客服"],
+      "potential": 4,
+      "actionItems": [
+        "调研企业客服自动化需求",
+        "开发低代码训练平台",
+        "支持多行业知识库",
+        "找5家企业试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-14",
+      "title": "城市周边露营基地运营",
+      "description": "在城市周边1-2小时车程内，打造精致露营基地。提供帐篷、餐饮、活动、拍照场景。按人头或套餐收费。",
+      "tags": ["户外", "本地生活", "服务", "旅游"],
+      "potential": 4,
+      "actionItems": [
+        "选址（交通便利+风景好）",
+        "申请土地/林地使用许可",
+        "设计露营场景和设施",
+        "通过小红书/抖音获客"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-14",
+      "name": "supabase/supabase",
+      "author": "supabase",
+      "avatar": "https://github.com/supabase.png",
+      "url": "https://github.com/supabase/supabase",
+      "description": "开源Firebase替代方案。提供PostgreSQL数据库、认证、实时订阅、存储等。可自托管，数据完全可控。",
+      "language": "TypeScript",
+      "stars": 75000,
+      "forks": 7000,
+      "topics": ["firebase-alternative", "database", "postgresql", "open-source"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-14",
+      "name": "sveltejs/svelte",
+      "author": "sveltejs",
+      "avatar": "https://github.com/sveltejs.png",
+      "url": "https://github.com/sveltejs/svelte",
+      "description": "编译时优化的前端框架，无虚拟DOM，运行时极小。组件即编译为高效的原生JS，性能卓越。",
+      "language": "TypeScript",
+      "stars": 82000,
+      "forks": 4500,
+      "topics": ["javascript", "framework", "compiler", "frontend"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-13",
+      "title": "AI 驱动的合同审查服务",
+      "description": "为企业和个人提供AI合同审查服务。自动识别风险条款、不利条件、缺失要素。降低法务成本。",
+      "tags": ["AI应用", "法律", "SaaS", "企业服务"],
+      "potential": 4,
+      "actionItems": [
+        "调研合同审查市场需求",
+        "训练合同审查模型",
+        "开发风险条款库",
+        "找律所合作验证"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-13",
+      "title": "露营主题文创产品",
+      "description": "设计销售露营主题的文创产品（徽章、贴纸、T恤、帆布包等）。通过独特设计吸引露营爱好者。",
+      "tags": ["户外", "文创", "DTC", "设计"],
+      "potential": 3,
+      "actionItems": [
+        "调研露营文创市场",
+        "设计系列产品",
+        "找供应商打样",
+        "通过社群和展会销售"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-13",
+      "name": "facebook/create-react-app",
+      "author": "facebook",
+      "avatar": "https://github.com/facebook.png",
+      "url": "https://github.com/facebook/create-react-app",
+      "description": "React官方推荐的创建React应用工具链。零配置，内置最佳实践，快速启动React项目。",
+      "language": "JavaScript",
+      "stars": 102000,
+      "forks": 27000,
+      "topics": ["react", "toolchain", "javascript", "frontend"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-13",
+      "name": "apache/kafka",
+      "author": "apache",
+      "avatar": "https://github.com/apache.png",
+      "url": "https://github.com/apache/kafka",
+      "description": "Apache开源的分布式流处理平台。高吞吐量、低延迟，用于构建实时数据管道和流式应用。",
+      "language": "Java",
+      "stars": 29000,
+      "forks": 14000,
+      "topics": ["kafka", "streaming", "distributed", "apache"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-12",
+      "title": "AI 驱动的社交媒体运营工具",
+      "description": "为中小企业提供AI社交媒体运营服务。自动生成内容、定时发布、数据分析、粉丝互动。按月收费。",
+      "tags": ["AI应用", "营销", "SaaS", "社交媒体"],
+      "potential": 4,
+      "actionItems": [
+        "调研中小企业社媒运营痛点",
+        "开发多平台内容生成",
+        "设计数据分析看板",
+        "找10家企业试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-12",
+      "title": "露营桌椅配件及周边",
+      "description": "针对已有露营桌椅的用户，开发配套配件（杯架、挂钩、收纳袋、防晒伞等）。低成本、高复购。",
+      "tags": ["户外", "电商", "配件", "硬件"],
+      "potential": 3,
+      "actionItems": [
+        "调研用户配件需求",
+        "设计3-5款实用配件",
+        "找工厂打样",
+        "在现有店铺测试"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-12",
+      "name": "mongodb/mongo",
+      "author": "mongodb",
+      "avatar": "https://github.com/mongodb.png",
+      "url": "https://github.com/mongodb/mongo",
+      "description": "流行的NoSQL文档数据库。灵活的JSON-like文档模型，水平扩展能力强，适合快速迭代和现代应用。",
+      "language": "C++",
+      "stars": 26000,
+      "forks": 5500,
+      "topics": ["database", "nosql", "document-store", "mongodb"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-12",
+      "name": "prometheus/prometheus",
+      "author": "prometheus",
+      "avatar": "https://github.com/prometheus.png",
+      "url": "https://github.com/prometheus/prometheus",
+      "description": "开源监控和告警工具包。多维数据模型、灵活查询语言、分布式存储。云原生监控的事实标准。",
+      "language": "Go",
+      "stars": 55000,
+      "forks": 9000,
+      "topics": ["monitoring", "metrics", "alerting", "cloud-native"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-11",
+      "title": "AI 驱动的库存预测系统",
+      "description": "为零售和电商企业提供AI库存预测服务。预测销量、优化补货、降低滞销。按SKU数量收费。",
+      "tags": ["AI应用", "电商", "SaaS", "供应链"],
+      "potential": 4,
+      "actionItems": [
+        "调研库存管理痛点",
+        "开发需求预测模型",
+        "设计补货建议系统",
+        "找3家企业试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-11",
+      "title": "露营主题摄影服务",
+      "description": "在露营地提供专业的户外摄影服务。为露营者拍摄自然风格的照片，现场选片、即时打印。",
+      "tags": ["户外", "摄影", "服务", "本地生活"],
+      "potential": 3,
+      "actionItems": [
+        "调研露营者摄影需求",
+        "准备便携摄影设备",
+        "设计拍摄套餐",
+        "与露营地合作"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-11",
+      "name": "grafana/grafana",
+      "author": "grafana",
+      "avatar": "https://github.com/grafana.png",
+      "url": "https://github.com/grafana/grafana",
+      "description": "开源数据可视化和监控平台。支持多种数据源，丰富的图表类型，美观的仪表板。运维必备工具。",
+      "language": "TypeScript",
+      "stars": 65000,
+      "forks": 12000,
+      "topics": ["monitoring", "visualization", "dashboard", "observability"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-11",
+      "name": "traefik/traefik",
+      "author": "traefik",
+      "avatar": "https://github.com/traefik.png",
+      "url": "https://github.com/traefik/traefik",
+      "description": "云原生反向代理和负载均衡器。自动服务发现、动态配置、Let's Encrypt自动证书。适合容器和微服务架构。",
+      "language": "Go",
+      "stars": 51000,
+      "forks": 5200,
+      "topics": ["proxy", "load-balancer", "cloud-native", "go"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-10",
+      "title": "AI 驱动的竞品分析工具",
+      "description": "为电商卖家提供AI竞品分析服务。自动监控竞品价格、销量、评价、上新，生成分析报告。",
+      "tags": ["AI应用", "电商", "SaaS", "数据分析"],
+      "potential": 4,
+      "actionItems": [
+        "调研卖家竞品分析需求",
+        "开发多平台数据采集",
+        "设计分析报告模板",
+        "找10个卖家试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-10",
+      "title": "露营知识付费课程",
+      "description": "制作露营相关的知识付费课程（装备选择、营地搭建、野外生存、安全知识等）。通过视频平台销售。",
+      "tags": ["户外", "教育", "内容", "知识付费"],
+      "potential": 3,
+      "actionItems": [
+        "确定课程大纲和差异化",
+        "拍摄高质量课程内容",
+        "选择知识付费平台",
+        "通过社群推广"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-10",
+      "name": "hashicorp/terraform",
+      "author": "hashicorp",
+      "avatar": "https://github.com/hashicorp.png",
+      "url": "https://github.com/hashicorp/terraform",
+      "description": "基础设施即代码工具。通过声明式配置管理云资源，支持AWS/Azure/GCP等主流云平台。DevOps核心工具。",
+      "language": "Go",
+      "stars": 43000,
+      "forks": 9500,
+      "topics": ["infrastructure", "iac", "cloud", "devops"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-10",
+      "name": "ansible/ansible",
+      "author": "ansible",
+      "avatar": "https://github.com/ansible.png",
+      "url": "https://github.com/ansible/ansible",
+      "description": "RedHat开源的自动化运维工具。无代理架构，通过SSH管理服务器。配置管理、应用部署、任务编排。",
+      "language": "Python",
+      "stars": 63000,
+      "forks": 24000,
+      "topics": ["automation", "devops", "configuration-management", "python"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-09",
+      "title": "AI 驱动的产品描述生成",
+      "description": "为电商卖家自动生成吸引人的产品描述。输入产品参数，AI生成多版本文案，A/B测试选出最佳。",
+      "tags": ["AI应用", "电商", "SaaS", "营销"],
+      "potential": 4,
+      "actionItems": [
+        "调研卖家文案需求",
+        "训练产品描述模型",
+        "开发A/B测试功能",
+        "找10个卖家试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-09",
+      "title": "露营装备二手交易平台",
+      "description": "专注露营装备的二手交易平台。解决露营装备更新快、闲置率高的问题。提供验货、清洁、翻新服务。",
+      "tags": ["户外", "平台", "二手", "电商"],
+      "potential": 3,
+      "actionItems": [
+        "调研二手露营装备市场",
+        "开发小程序交易平台",
+        "建立验货标准",
+        "通过社群获客"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-09",
+      "name": "docker/docker",
+      "author": "docker",
+      "avatar": "https://github.com/docker.png",
+      "url": "https://github.com/docker/docker",
+      "description": "容器化平台的标准。将应用及其依赖打包为容器，确保环境一致性。简化了开发、测试、部署流程。",
+      "language": "Go",
+      "stars": 69000,
+      "forks": 19000,
+      "topics": ["containers", "docker", "devops", "virtualization"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-09",
+      "name": "kubernetes/minikube",
+      "author": "kubernetes",
+      "avatar": "https://github.com/kubernetes.png",
+      "url": "https://github.com/kubernetes/minikube",
+      "description": "在本地轻松运行Kubernetes的工具。单节点集群，适合开发和测试。支持多种虚拟化驱动。",
+      "language": "Go",
+      "stars": 29000,
+      "forks": 4800,
+      "topics": ["kubernetes", "local", "development", "devops"]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-08",
+      "title": "AI 驱动的店铺运营诊断",
+      "description": "为电商卖家提供AI店铺诊断服务。分析流量、转化、客单价、复购，生成优化建议报告。",
+      "tags": ["AI应用", "电商", "SaaS", "数据分析"],
+      "potential": 4,
+      "actionItems": [
+        "调研卖家运营诊断需求",
+        "开发多平台数据接入",
+        "设计诊断报告模板",
+        "找10个卖家试用"
+      ]
+    },
+    {
+      "type": "business",
+      "date": "2026-05-08",
+      "title": "露营主题团建活动策划",
+      "description": "为企业提供露营主题的团建活动策划服务。包含场地、装备、餐饮、活动设计、摄影等一站式服务。",
+      "tags": ["户外", "服务", "企业", "本地生活"],
+      "potential": 3,
+      "actionItems": [
+        "调研企业团建需求",
+        "设计露营团建方案",
+        "建立供应商网络",
+        "对接企业HR渠道"
+      ]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-08",
+      "name": "helm/helm",
+      "author": "helm",
+      "avatar": "https://github.com/helm.png",
+      "url": "https://github.com/helm/helm",
+      "description": "Kubernetes包管理器。简化K8s应用的定义、安装和升级。通过Chart打包应用及其依赖。",
+      "language": "Go",
+      "stars": 27000,
+      "forks": 7200,
+      "topics": ["kubernetes", "package-manager", "helm", "devops"]
+    },
+    {
+      "type": "github",
+      "date": "2026-05-08",
+      "name": "istio/istio",
+      "author": "istio",
+      "avatar": "https://github.com/istio.png",
+      "url": "https://github.com/istio/istio",
+      "description": "开源服务网格平台。为微服务提供流量管理、安全、可观测性。与Kubernetes深度集成。",
+      "language": "Go",
+      "stars": 35000,
+      "forks": 7600,
+      "topics": ["service-mesh", "microservices", "kubernetes", "cloud-native"]
+    }
+  ]
+}
