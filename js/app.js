@@ -1,5 +1,5 @@
 /**
- * 主应用逻辑 - v3
+ * 主应用逻辑 - v4
  * - Tab 切换：全部 / 商业点子 / GitHub项目 / 我的收藏
  * - 收藏按钮突出
  * - 详情弹窗
@@ -42,37 +42,31 @@ class App {
         });
 
         // 登录表单
-        document.getElementById('login-form')?.addEventListener('submit', (e) => {
+        const loginForm = document.getElementById('login-form');
+        const loginBtn = loginForm?.querySelector('button[type="submit"]');
+        
+        loginForm?.addEventListener('submit', (e) => {
             e.preventDefault();
-            const username = document.getElementById('login-username').value;
-            const password = document.getElementById('login-password').value;
-            const result = this.auth.login(username, password);
-            
-            if (result.success) {
-                this.showMainContent();
-                this.checkAuth();
-                this.render();
-            } else {
-                document.getElementById('login-error').textContent = result.message;
-            }
+            this.handleLogin();
+        });
+        
+        loginBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.handleLogin();
         });
 
         // 注册表单
-        document.getElementById('register-form')?.addEventListener('submit', (e) => {
+        const registerForm = document.getElementById('register-form');
+        const registerBtn = registerForm?.querySelector('button[type="submit"]');
+        
+        registerForm?.addEventListener('submit', (e) => {
             e.preventDefault();
-            const username = document.getElementById('register-username').value;
-            const password = document.getElementById('register-password').value;
-            const inviteCode = document.getElementById('register-invite-code').value;
-            
-            const result = this.auth.register(username, password, inviteCode);
-            
-            if (result.success) {
-                this.showMainContent();
-                this.checkAuth();
-                this.render();
-            } else {
-                document.getElementById('register-error').textContent = result.message;
-            }
+            this.handleRegister();
+        });
+        
+        registerBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.handleRegister();
         });
 
         // 生成邀请码
@@ -104,8 +98,6 @@ class App {
         document.getElementById('logout-btn')?.addEventListener('click', () => {
             this.auth.logout();
             this.checkAuth();
-            document.getElementById('main-content').classList.add('hidden');
-            document.getElementById('login-section').classList.remove('hidden');
         });
 
         // 搜索
@@ -129,25 +121,67 @@ class App {
         });
     }
 
+    handleLogin() {
+        const username = document.getElementById('login-username')?.value;
+        const password = document.getElementById('login-password')?.value;
+        
+        if (!username || !password) {
+            document.getElementById('login-error').textContent = '请输入用户名和密码';
+            return;
+        }
+        
+        const result = this.auth.login(username, password);
+        
+        if (result.success) {
+            this.showMainContent();
+            this.checkAuth();
+            this.render();
+        } else {
+            document.getElementById('login-error').textContent = result.message;
+        }
+    }
+
+    handleRegister() {
+        const username = document.getElementById('register-username')?.value;
+        const password = document.getElementById('register-password')?.value;
+        const inviteCode = document.getElementById('register-invite-code')?.value;
+        
+        const result = this.auth.register(username, password, inviteCode);
+        
+        if (result.success) {
+            this.showMainContent();
+            this.checkAuth();
+            this.render();
+        } else {
+            document.getElementById('register-error').textContent = result.message;
+        }
+    }
+
     checkAuth() {
         const user = this.auth.currentUser;
         if (user) {
-            document.getElementById('login-section')?.classList.add('hidden');
-            document.getElementById('main-content')?.classList.remove('hidden');
-            document.getElementById('user-info').textContent = `欢迎，${user.username}`;
+            // 隐藏登录弹窗
+            document.getElementById('auth-modal')?.classList.add('hidden');
+            // 显示用户信息
+            document.getElementById('invite-btn')?.classList.remove('hidden');
+            document.getElementById('user-info')?.classList.remove('hidden');
+            document.getElementById('username-display').textContent = user.username;
         } else {
-            document.getElementById('login-section')?.classList.remove('hidden');
-            document.getElementById('main-content')?.classList.add('hidden');
+            // 显示登录弹窗
+            document.getElementById('auth-modal')?.classList.remove('hidden');
+            // 隐藏用户信息
+            document.getElementById('invite-btn')?.classList.add('hidden');
+            document.getElementById('user-info')?.classList.add('hidden');
         }
         this.updateTabUI();
     }
 
     showMainContent() {
-        document.getElementById('login-form-container')?.classList.remove('hidden');
-        document.getElementById('register-form-container')?.classList.add('hidden');
-        document.getElementById('login-form-container').classList.remove('hidden');
-        document.getElementById('main-content').classList.remove('hidden');
-        document.getElementById('login-section').classList.add('hidden');
+        // 隐藏登录弹窗
+        document.getElementById('auth-modal')?.classList.add('hidden');
+        // 显示用户信息
+        document.getElementById('invite-btn')?.classList.remove('hidden');
+        document.getElementById('user-info')?.classList.remove('hidden');
     }
 
     updateTabUI() {
