@@ -303,6 +303,19 @@
             <i class="fas fa-inbox text-5xl text-gray-600 mb-4"></i>
             <p class="text-gray-400">暂无内容</p>
         </div>
+
+        <!-- Detail Modal -->
+        <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+            <div class="glass-card border border-gray-700 rounded-2xl w-full max-w-2xl max-h-screen overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 id="detail-title" class="text-xl font-bold text-white"></h2>
+                        <button id="detail-modal-close" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+                    </div>
+                    <div id="detail-body" class="text-gray-300"></div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="js/auth.js"></script>

@@ -1,8 +1,8 @@
 /**
- * 主应用逻辑 - 重构版
+ * 主应用逻辑 - v3
  * - Tab 切换：全部 / 商业点子 / GitHub项目 / 我的收藏
- * - 简洁卡片设计
- * - 收藏功能突出
+ * - 收藏按钮突出
+ * - 详情弹窗
  */
 
 class App {
@@ -18,7 +18,6 @@ class App {
         this.setupEventListeners();
         this.checkAuth();
         await this.loadData();
-        this.render();
     }
 
     setupEventListeners() {
@@ -48,57 +47,70 @@ class App {
             const username = document.getElementById('login-username').value;
             const password = document.getElementById('login-password').value;
             const result = this.auth.login(username, password);
-            if (result.valid) {
-                this.onLoginSuccess();
+            
+            if (result.success) {
+                this.showMainContent();
+                this.checkAuth();
+                this.render();
             } else {
-                alert(result.message);
+                document.getElementById('login-error').textContent = result.message;
             }
         });
 
         // 注册表单
         document.getElementById('register-form')?.addEventListener('submit', (e) => {
             e.preventDefault();
-            const username = document.getElementById('reg-username').value;
-            const password = document.getElementById('reg-password').value;
-            const inviteCode = document.getElementById('reg-invite-code').value;
+            const username = document.getElementById('register-username').value;
+            const password = document.getElementById('register-password').value;
+            const inviteCode = document.getElementById('register-invite-code').value;
+            
             const result = this.auth.register(username, password, inviteCode);
-            if (result.valid) {
-                this.onLoginSuccess();
+            
+            if (result.success) {
+                this.showMainContent();
+                this.checkAuth();
+                this.render();
             } else {
-                alert(result.message);
+                document.getElementById('register-error').textContent = result.message;
             }
         });
 
-        // 退出
+        // 生成邀请码
+        document.getElementById('generate-invite')?.addEventListener('click', () => {
+            if (!this.auth.isLoggedIn()) {
+                alert('请先登录');
+                return;
+            }
+            const code = this.auth.generateInviteCode();
+            document.getElementById('invite-code-display').textContent = code;
+            document.getElementById('invite-code-container').classList.remove('hidden');
+            
+            // 30分钟倒计时
+            let seconds = 30 * 60;
+            const timer = setInterval(() => {
+                seconds--;
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('invite-code-container').classList.add('hidden');
+                }
+                const m = Math.floor(seconds / 60);
+                const s = seconds % 60;
+                document.getElementById('invite-countdown').textContent = 
+                    `剩余 ${m}:${s.toString().padStart(2, '0')}`;
+            }, 1000);
+        });
+
+        // 登出
         document.getElementById('logout-btn')?.addEventListener('click', () => {
             this.auth.logout();
-            location.reload();
-        });
-
-        // 邀请码
-        document.getElementById('invite-btn')?.addEventListener('click', () => {
-            document.getElementById('invite-modal').classList.remove('hidden');
-            this.renderMyInvites();
-        });
-
-        document.getElementById('close-invite-modal')?.addEventListener('click', () => {
-            document.getElementById('invite-modal').classList.add('hidden');
-        });
-
-        document.getElementById('generate-invite-btn')?.addEventListener('click', () => {
-            this.generateInviteCode();
-        });
-
-        document.getElementById('copy-invite-code')?.addEventListener('click', () => {
-            const code = document.getElementById('generated-code').textContent;
-            navigator.clipboard.writeText(code).then(() => {
-                alert('邀请码已复制！');
-            });
+            this.checkAuth();
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('login-section').classList.remove('hidden');
         });
 
         // 搜索
         document.getElementById('search-input')?.addEventListener('input', (e) => {
-            this.currentFilter.search = e.target.value.toLowerCase();
+            this.currentFilter.search = e.target.value;
             this.render();
         });
 
@@ -107,84 +119,61 @@ class App {
             this.currentFilter.date = e.target.value;
             this.render();
         });
+
+        // 详情弹窗关闭
+        document.getElementById('detail-modal-close')?.addEventListener('click', () => {
+            this.closeDetail();
+        });
+        document.getElementById('detail-modal')?.addEventListener('click', (e) => {
+            if (e.target.id === 'detail-modal') this.closeDetail();
+        });
+    }
+
+    checkAuth() {
+        const user = this.auth.currentUser;
+        if (user) {
+            document.getElementById('login-section')?.classList.add('hidden');
+            document.getElementById('main-content')?.classList.remove('hidden');
+            document.getElementById('user-info').textContent = `欢迎，${user.username}`;
+        } else {
+            document.getElementById('login-section')?.classList.remove('hidden');
+            document.getElementById('main-content')?.classList.add('hidden');
+        }
+        this.updateTabUI();
+    }
+
+    showMainContent() {
+        document.getElementById('login-form-container')?.classList.remove('hidden');
+        document.getElementById('register-form-container')?.classList.add('hidden');
+        document.getElementById('login-form-container').classList.remove('hidden');
+        document.getElementById('main-content').classList.remove('hidden');
+        document.getElementById('login-section').classList.add('hidden');
     }
 
     updateTabUI() {
         document.querySelectorAll('.tab-btn').forEach(btn => {
             if (btn.dataset.tab === this.currentTab) {
                 btn.classList.add('tab-active');
-                btn.classList.remove('glass-card');
             } else {
                 btn.classList.remove('tab-active');
-                btn.classList.add('glass-card');
             }
         });
 
-        if (this.currentTab === 'favorites') {
-            const favCount = this.getFavoriteEntries().length;
-            document.getElementById('favorites-count').classList.remove('hidden');
-            document.getElementById('favorites-count').innerHTML = 
-                `<i class="fas fa-heart text-pink-400 mr-1"></i>收藏 ${favCount} 条`;
-        } else {
-            document.getElementById('favorites-count').classList.add('hidden');
+        // 更新收藏计数
+        const favCount = this.auth.currentUser?.favorites?.length || 0;
+        const favBtn = document.querySelector('[data-tab="favorites"]');
+        if (favBtn) {
+            favBtn.innerHTML = `❤️ 我的收藏 <span class="ml-1 text-xs">(${favCount})</span>`;
         }
     }
 
-    checkAuth() {
-        if (this.auth.isLoggedIn()) {
-            this.onLoginSuccess();
-        }
-    }
-
-    onLoginSuccess() {
-        document.getElementById('auth-modal').classList.add('hidden');
-        document.getElementById('user-info').classList.remove('hidden');
-        document.getElementById('invite-btn').classList.remove('hidden');
-        document.getElementById('username-display').textContent = this.auth.getCurrentUser().username;
-    }
-
-    generateInviteCode() {
-        const result = this.auth.generateInviteCode();
-        if (result.valid) {
-            document.getElementById('generated-code').textContent = result.code;
-            document.getElementById('invite-code-display').classList.remove('hidden');
-            this.startCountdown(result.expiresAt);
-            this.renderMyInvites();
-        } else {
-            alert(result.message);
-        }
-    }
-
-    startCountdown(expiresAt) {
-        const updateTimer = () => {
-            const remaining = expiresAt - Date.now();
-            if (remaining <= 0) {
-                document.getElementById('countdown-timer').textContent = '已过期';
-                return;
-            }
-            const mins = Math.floor(remaining / 60000);
-            const secs = Math.floor((remaining % 60000) / 1000);
-            document.getElementById('countdown-timer').textContent = 
-                `剩余: ${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-        };
-        updateTimer();
-        setInterval(updateTimer, 1000);
-    }
-
-    renderMyInvites() {
-        const invites = this.auth.getMyInvites();
-        const container = document.getElementById('invites-list');
-        if (!invites.length) {
-            container.innerHTML = '<p class="text-sm text-gray-500">暂无邀请记录</p>';
-        } else {
-            container.innerHTML = invites.map(invite => `
-                <div class="flex justify-between items-center bg-black/20 rounded p-2 text-sm">
-                    <span class="font-mono text-cyan-400">${invite.code}</span>
-                    <span class="text-xs ${invite.status === '有效中' ? 'text-green-400' : 'text-gray-500'}">${invite.status}</span>
-                </div>
-            `).join('');
-        }
-        document.getElementById('my-invites').classList.remove('hidden');
+    updateDateOptions() {
+        const select = document.getElementById('date-filter');
+        if (!select) return;
+        
+        const dates = this.data.dates || [];
+        select.innerHTML = '<option value="all">全部日期</option>' + 
+            dates.map(d => `<option value="${d}">${d}</option>`).join('');
     }
 
     async loadData() {
@@ -202,7 +191,6 @@ class App {
             this.updateDateOptions();
         } catch (error) {
             console.error('加载数据失败:', error);
-            // 使用内置数据
             this.data = this.getFallbackData();
         }
         document.getElementById('loading').classList.add('hidden');
@@ -217,43 +205,40 @@ class App {
         };
     }
 
-    updateDateOptions() {
-        const select = document.getElementById('date-filter');
-        select.innerHTML = '<option value="all">全部日期</option>';
-        this.data.dates.slice(0, 14).forEach(date => {
-            const option = document.createElement('option');
-            option.value = date;
-            option.textContent = date;
-            select.appendChild(option);
-        });
-    }
-
     getFilteredEntries() {
-        let entries = this.data.entries || [];
+        let entries = [...this.data.entries];
         
+        // Tab 筛选
         if (this.currentTab === 'business') {
             entries = entries.filter(e => e.type === 'business');
         } else if (this.currentTab === 'github') {
             entries = entries.filter(e => e.type === 'github');
         } else if (this.currentTab === 'favorites') {
-            entries = this.getFavoriteEntries();
+            entries = entries.filter(e => {
+                const id = e.type === 'business' 
+                    ? `biz-${this.data.entries.indexOf(e)}` 
+                    : `gh-${this.data.entries.indexOf(e)}`;
+                return this.auth.isFavorite(id);
+            });
         }
         
+        // 日期筛选
         if (this.currentFilter.date !== 'all') {
             entries = entries.filter(e => e.date === this.currentFilter.date);
         }
         
+        // 搜索筛选
         if (this.currentFilter.search) {
-            const search = this.currentFilter.search;
+            const q = this.currentFilter.search.toLowerCase();
             entries = entries.filter(e => {
                 if (e.type === 'business') {
-                    return e.title?.toLowerCase().includes(search) || 
-                           e.description?.toLowerCase().includes(search) ||
-                           e.tags?.some(t => t.toLowerCase().includes(search));
+                    return e.title.toLowerCase().includes(q) ||
+                        e.description.toLowerCase().includes(q) ||
+                        (e.tags || []).some(t => t.toLowerCase().includes(q));
                 } else {
-                    return e.name?.toLowerCase().includes(search) ||
-                           e.description?.toLowerCase().includes(search) ||
-                           e.language?.toLowerCase().includes(search);
+                    return e.name.toLowerCase().includes(q) ||
+                        e.description.toLowerCase().includes(q) ||
+                        (e.topics || []).some(t => t.toLowerCase().includes(q));
                 }
             });
         }
@@ -261,36 +246,22 @@ class App {
         return entries;
     }
 
-    getFavoriteEntries() {
-        const user = this.auth.getCurrentUser();
-        if (!user || !user.favorites) return [];
-        
-        return this.data.entries.filter((e, i) => {
-            const id = e.type === 'business' ? `biz-${i}` : `gh-${i}`;
-            return user.favorites.includes(id);
-        });
-    }
-
     render() {
-        const grid = document.getElementById('content-grid');
         const entries = this.getFilteredEntries();
+        const grid = document.getElementById('content-grid');
+        const emptyState = document.getElementById('empty-state');
         
-        if (this.currentTab === 'favorites') {
-            const favCount = this.getFavoriteEntries().length;
-            document.getElementById('content-count').textContent = `收藏 ${favCount} 条`;
-        } else {
-            document.getElementById('content-count').textContent = `共 ${entries.length} 条`;
-        }
+        if (!grid) return;
         
         if (entries.length === 0) {
             grid.innerHTML = '';
-            document.getElementById('empty-state').classList.remove('hidden');
+            emptyState.classList.remove('hidden');
             return;
         }
         
-        document.getElementById('empty-state').classList.add('hidden');
+        emptyState.classList.add('hidden');
         
-        grid.innerHTML = entries.map((entry, realIndex) => {
+        grid.innerHTML = entries.map((entry) => {
             const globalIndex = this.data.entries.indexOf(entry);
             const id = entry.type === 'business' ? `biz-${globalIndex}` : `gh-${globalIndex}`;
             
@@ -307,14 +278,17 @@ class App {
         const stars = '★'.repeat(entry.potential || 3) + '☆'.repeat(5 - (entry.potential || 3));
         
         return `
-            <div class="glass-card rounded-xl p-5 card-hover border border-gray-800 flex flex-col h-full">
+            <div class="glass-card rounded-xl p-5 border border-gray-800 flex flex-col h-full">
                 <div class="flex justify-between items-start mb-3">
                     <span class="tag-business text-white text-xs px-3 py-1 rounded-full">💡 商业点子</span>
                     <span class="text-yellow-400 text-sm">${stars}</span>
                 </div>
                 
-                <h3 class="text-lg font-bold mb-2 text-white">${entry.title}</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-3 flex-1">${entry.description}</p>
+                <h3 class="text-lg font-bold mb-2 text-white cursor-pointer hover:text-purple-400" 
+                    onclick="app.showDetail('business', ${index})">
+                    ${entry.title} <i class="fas fa-external-link-alt text-xs text-gray-500"></i>
+                </h3>
+                <p class="text-gray-400 text-sm mb-4 flex-1">${entry.description}</p>
                 
                 <div class="flex flex-wrap gap-2 mb-4">
                     ${(entry.tags || []).slice(0, 3).map(tag => 
@@ -322,16 +296,18 @@ class App {
                     ).join('')}
                 </div>
                 
-                <div class="flex justify-between items-center text-sm mb-3">
-                    <span class="text-gray-500">${entry.date}</span>
+                <div class="flex gap-2">
+                    <button onclick="app.showDetail('business', ${index})"
+                        class="flex-1 py-3 rounded-lg font-medium bg-gray-800 hover:bg-gray-700 text-gray-300 transition">
+                        <i class="fas fa-eye mr-2"></i>查看详情
+                    </button>
+                    <button onclick="app.toggleFavorite('${id}', ${index})" 
+                        class="px-5 py-3 rounded-lg font-medium transition ${isFav 
+                            ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white' 
+                            : 'bg-gray-800 hover:bg-gray-700 text-gray-300'}">
+                        <i class="fas fa-heart${isFav ? '' : '-o'} mr-1"></i>
+                    </button>
                 </div>
-                
-                <button onclick="app.toggleFavorite('${id}', ${index})" 
-                    class="w-full py-3 rounded-lg font-medium transition ${isFav 
-                        ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white' 
-                        : 'bg-gray-800 hover:bg-gray-700 text-gray-300'}">
-                    <i class="fas fa-heart${isFav ? '' : '-o'} mr-2"></i>${isFav ? '已收藏' : '收藏'}
-                </button>
             </div>
         `;
     }
@@ -340,7 +316,7 @@ class App {
         const isFav = this.auth.isFavorite(id);
         
         return `
-            <div class="glass-card rounded-xl p-5 card-hover border border-gray-800 flex flex-col h-full">
+            <div class="glass-card rounded-xl p-5 border border-gray-800 flex flex-col h-full">
                 <div class="flex items-center mb-3">
                     <img src="${entry.avatar}" alt="${entry.author}" class="w-10 h-10 rounded-full mr-3" 
                         onerror="this.src='https://github.com/ghost.png'">
@@ -351,7 +327,13 @@ class App {
                     <span class="tag-tech text-white text-xs px-3 py-1 rounded-full">⚡ GitHub</span>
                 </div>
                 
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2 flex-1">${entry.description || '暂无描述'}</p>
+                <p class="text-gray-400 text-sm mb-4 flex-1">${entry.description || '暂无描述'}</p>
+                
+                <div class="flex flex-wrap gap-2 mb-2">
+                    ${(entry.topics || []).slice(0, 4).map(topic => 
+                        `<span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded">${topic}</span>`
+                    ).join('')}
+                </div>
                 
                 <div class="flex items-center gap-4 mb-4 text-sm text-gray-400">
                     ${entry.language ? `<span><i class="fas fa-code mr-1"></i>${entry.language}</span>` : ''}
@@ -361,14 +343,14 @@ class App {
                 
                 <div class="flex gap-2">
                     <a href="${entry.url}" target="_blank" 
-                        class="flex-1 py-3 text-center bg-gray-800 hover:bg-gray-700 rounded-lg text-sm transition">
+                        class="flex-1 py-3 text-center bg-gray-800 hover:bg-gray-700 rounded-lg text-sm transition text-gray-300">
                         <i class="fab fa-github mr-1"></i>查看项目
                     </a>
                     <button onclick="app.toggleFavorite('${id}', ${index})" 
-                        class="px-6 py-3 rounded-lg font-medium transition ${isFav 
+                        class="px-5 py-3 rounded-lg font-medium transition ${isFav 
                             ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white' 
                             : 'bg-gray-800 hover:bg-gray-700 text-gray-300'}">
-                        <i class="fas fa-heart${isFav ? '' : '-o'} mr-1"></i>${isFav ? '已收藏' : '收藏'}
+                        <i class="fas fa-heart${isFav ? '' : '-o'} mr-1"></i>
                     </button>
                 </div>
             </div>
@@ -384,20 +366,94 @@ class App {
         this.auth.toggleFavorite(id);
         this.auth.saveUsers();
         
-        if (this.currentTab === 'favorites') {
-            this.render();
-        } else {
-            const btn = document.querySelector(`[onclick="app.toggleFavorite('${id}', ${index})"]`);
-            if (btn) {
-                const isFav = this.auth.isFavorite(id);
-                btn.className = `fav-btn text-2xl ${isFav ? 'fav-active' : 'text-gray-600 hover:text-pink-400'}`;
-                btn.innerHTML = `<i class="fas fa-heart${isFav ? '' : '-o'}"></i>`;
+        // 更新收藏按钮样式
+        const btns = document.querySelectorAll(`[onclick="app.toggleFavorite('${id}', ${index})"]`);
+        btns.forEach(btn => {
+            const isFav = this.auth.isFavorite(id);
+            if (isFav) {
+                btn.className = 'px-5 py-3 rounded-lg font-medium transition bg-gradient-to-r from-pink-600 to-rose-600 text-white';
+                btn.innerHTML = '<i class="fas fa-heart mr-1"></i>';
+            } else {
+                btn.className = 'px-5 py-3 rounded-lg font-medium transition bg-gray-800 hover:bg-gray-700 text-gray-300';
+                btn.innerHTML = '<i class="fas fa-heart-o mr-1"></i>';
             }
+        });
+        
+        // 更新Tab计数
+        this.updateTabUI();
+        
+        // 如果在收藏Tab且取消收藏，刷新列表
+        if (this.currentTab === 'favorites' && !this.auth.isFavorite(id)) {
+            this.render();
+        }
+    }
+
+    showDetail(type, index) {
+        const entry = this.data.entries[index];
+        if (!entry) return;
+        
+        if (type === 'business') {
+            const stars = '★'.repeat(entry.potential || 3) + '☆'.repeat(5 - (entry.potential || 3));
+            const actionItems = (entry.actionItems || []).map(item => 
+                `<li class="py-2 border-b border-gray-700 last:border-0 text-gray-300">${item}</li>`
+            ).join('');
+            
+            document.getElementById('detail-title').textContent = entry.title;
+            document.getElementById('detail-body').innerHTML = `
+                <div class="mb-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="tag-business text-white text-xs px-3 py-1 rounded-full">💡 商业点子</span>
+                        <span class="text-yellow-400">${stars}</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4 whitespace-pre-wrap">${entry.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        ${(entry.tags || []).map(tag => 
+                            `<span class="bg-purple-900/50 text-purple-300 text-xs px-3 py-1 rounded">${tag}</span>`
+                        ).join('')}
+                    </div>
+                    <p class="text-gray-500 text-sm"><i class="far fa-calendar mr-2"></i>${entry.date}</p>
+                </div>
+                ${actionItems ? `
+                <div class="mt-6">
+                    <h4 class="text-white font-bold mb-3"><i class="fas fa-tasks mr-2"></i>行动项</h4>
+                    <ul class="text-gray-400 text-sm space-y-2">${actionItems}</ul>
+                </div>` : ''}
+            `;
+        } else {
+            document.getElementById('detail-title').textContent = entry.name.split('/')[1] || entry.name;
+            document.getElementById('detail-body').innerHTML = `
+                <div class="mb-4">
+                    <div class="flex items-center mb-4">
+                        <img src="${entry.avatar}" class="w-12 h-12 rounded-full mr-4" onerror="this.src='https://github.com/ghost.png'">
+                        <div>
+                            <h3 class="font-bold text-white">${entry.name}</h3>
+                            <p class="text-gray-500 text-sm">${entry.author}</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4 whitespace-pre-wrap">${entry.description || '暂无描述'}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        ${(entry.topics || []).map(topic => 
+                            `<span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded">${topic}</span>`
+                        ).join('')}
+                    </div>
+                    <div class="flex gap-4 text-gray-400 text-sm mb-4">
+                        ${entry.language ? `<span><i class="fas fa-code mr-1"></i>${entry.language}</span>` : ''}
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i>${entry.stars?.toLocaleString()}</span>
+                        <span><i class="fas fa-code-branch mr-1"></i>${entry.forks?.toLocaleString()}</span>
+                    </div>
+                    <a href="${entry.url}" target="_blank" 
+                        class="inline-block px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition">
+                        <i class="fab fa-github mr-2"></i>前往 GitHub
+                    </a>
+                </div>
+            `;
         }
         
-        if (this.currentTab === 'favorites') {
-            this.updateTabUI();
-        }
+        document.getElementById('detail-modal').classList.remove('hidden');
+    }
+
+    closeDetail() {
+        document.getElementById('detail-modal').classList.add('hidden');
     }
 
     formatNumber(num) {
