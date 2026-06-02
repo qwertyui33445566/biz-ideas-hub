@@ -117,6 +117,7 @@ class App {
         // 邀请弹窗开关
         document.getElementById('invite-btn')?.addEventListener('click', () => {
             document.getElementById('invite-modal')?.classList.remove('hidden');
+            this.renderInviteHistory();
         });
         document.getElementById('close-invite-modal')?.addEventListener('click', () => {
             document.getElementById('invite-modal')?.classList.add('hidden');
@@ -314,7 +315,11 @@ class App {
         if (sorted.length === 0) { container.innerHTML = ''; return; }
 
         var self = this;
-        container.innerHTML = sorted.map(function(item) {
+        var clearBtn = self.activeFilters.size > 0
+            ? '<button id="clear-filters-btn" class="text-xs text-gray-400 hover:text-white px-2 py-1.5 rounded-full border border-gray-600 hover:border-gray-400 transition">❌ 清除全部</button>'
+            : '';
+
+        container.innerHTML = clearBtn + sorted.map(function(item) {
             var key = item[0], count = item[1];
             var isActive = self.activeFilters.has(key);
             var label = '', cls = '';
@@ -338,6 +343,13 @@ class App {
                 self.render();
             });
         });
+        var clearBtnEl = document.getElementById('clear-filters-btn');
+        if (clearBtnEl) {
+            clearBtnEl.addEventListener('click', function() {
+                self.activeFilters.clear();
+                self.render();
+            });
+        }
     }
 
     getFilteredEntriesNoTags() {
@@ -419,7 +431,7 @@ class App {
             '<p class="text-gray-400 text-sm mb-4 flex-1 line-clamp-2">' + this.esc(entry.description || '') + '</p>' +
             '<div class="flex flex-wrap gap-1.5 mb-4">' +
                 (entry.tags || []).slice(0, 4).map(function(tag) {
-                    return '<span class="bg-purple-900/50 text-purple-300 text-xs px-2 py-1 rounded cursor-pointer hover:bg-purple-800/60" onclick="event.stopPropagation();app.addFilter(\'tag:' + tag + '\')">' + app.esc(tag) + '</span>';
+                    return '<span class="bg-purple-900/50 text-purple-300 text-xs px-2 py-1 rounded cursor-pointer hover:bg-purple-800/60" onclick="event.stopPropagation();app.addFilter(' + JSON.stringify('tag:' + tag) + ')">' + app.esc(tag) + '</span>';
                 }).join('') +
             '</div>' +
             '<div class="flex gap-2 mt-auto" onclick="event.stopPropagation()">' +
@@ -447,11 +459,11 @@ class App {
             '<p class="text-gray-400 text-sm mb-4 flex-1 line-clamp-2">' + this.esc(entry.description || '暂无描述') + '</p>' +
             '<div class="flex flex-wrap gap-1.5 mb-2" onclick="event.stopPropagation()">' +
                 (entry.topics || []).slice(0, 4).map(function(topic) {
-                    return '<span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded cursor-pointer hover:bg-blue-800/60" onclick="event.stopPropagation();app.addFilter(\'topic:' + topic + '\')">' + app.esc(topic) + '</span>';
+                    return '<span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded cursor-pointer hover:bg-blue-800/60" onclick="event.stopPropagation();app.addFilter(' + JSON.stringify('topic:' + topic) + ')">' + app.esc(topic) + '</span>';
                 }).join('') +
             '</div>' +
             '<div class="flex items-center gap-3 mb-4 text-xs text-gray-400 flex-wrap" onclick="event.stopPropagation()">' +
-                (entry.language ? '<span class="cursor-pointer hover:text-cyan-400" onclick="event.stopPropagation();app.addFilter(\'lang:' + entry.language + '\')"><span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-400 mr-1"></span>' + this.esc(entry.language) + '</span>' : '') +
+                (entry.language ? '<span class="cursor-pointer hover:text-cyan-400" onclick="event.stopPropagation();app.addFilter(' + JSON.stringify('lang:' + entry.language) + ')"><span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-400 mr-1"></span>' + this.esc(entry.language) + '</span>' : '') +
                 '<span>⭐ ' + this.formatNumber(starCount) + '</span>' +
                 '<span>🍴 ' + this.formatNumber(entry.forks || 0) + '</span>' +
             '</div>' +
@@ -501,7 +513,7 @@ class App {
                 '<p class="text-gray-300 leading-relaxed mb-4 whitespace-pre-wrap">' + this.esc(entry.description || '') + '</p>' +
                 '<div class="flex flex-wrap gap-2 mb-4">' +
                     (entry.tags || []).map(function(tag) {
-                        return '<span class="bg-purple-900/50 text-purple-300 text-xs px-3 py-1 rounded cursor-pointer hover:bg-purple-800/60" onclick="app.addFilter(\'tag:' + tag + '\')">' + app.esc(tag) + '</span>';
+                        return '<span class="bg-purple-900/50 text-purple-300 text-xs px-3 py-1 rounded cursor-pointer hover:bg-purple-800/60" onclick="app.addFilter(' + JSON.stringify('tag:' + tag) + ')">' + app.esc(tag) + '</span>';
                     }).join('') +
                 '</div>' +
                 '<p class="text-gray-500 text-sm"><i class="far fa-calendar mr-2"></i>' + (entry.date || '') + '</p>' +
@@ -524,7 +536,7 @@ class App {
                 '<p class="text-gray-300 leading-relaxed mb-4 whitespace-pre-wrap">' + this.esc(entry.description || '暂无描述') + '</p>' +
                 '<div class="flex flex-wrap gap-2 mb-4">' +
                     (entry.topics || []).map(function(topic) {
-                        return '<span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded cursor-pointer hover:bg-blue-800/60" onclick="app.addFilter(\'topic:' + topic + '\')">' + app.esc(topic) + '</span>';
+                        return '<span class="bg-blue-900/50 text-blue-300 text-xs px-3 py-1 rounded cursor-pointer hover:bg-blue-800/60" onclick="app.addFilter(' + JSON.stringify('topic:' + topic) + ')">' + app.esc(topic) + '</span>';
                     }).join('') +
                 '</div>' +
                 '<div class="flex gap-4 text-gray-400 text-sm mb-4 flex-wrap">' +
@@ -533,13 +545,34 @@ class App {
                     '<span>🍴 ' + ((entry.forks || 0).toLocaleString()) + '</span>' +
                 '</div>' +
                 '<a href="' + (entry.url || '#') + '" target="_blank" class="inline-block px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition"><i class="fab fa-github mr-2"></i>前往 GitHub</a>' +
+                (entry.synced_at ? '<p class="text-xs text-gray-500 mt-4"><i class="fas fa-sync-alt mr-1 text-green-400"></i>数据同步于 ' + new Date(entry.synced_at).toLocaleString('zh-CN') + '</p>' : '') +
                 '</div>';
         }
         document.getElementById('detail-modal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
     }
 
     closeDetail() {
         document.getElementById('detail-modal').classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    renderInviteHistory() {
+        var list = document.getElementById('invites-list');
+        var container = document.getElementById('my-invites');
+        if (!list || !container) return;
+        var invites = this.auth.getMyInvites ? this.auth.getMyInvites() : [];
+        if (invites.length === 0) { container.classList.add('hidden'); return; }
+        container.classList.remove('hidden');
+        list.innerHTML = invites.map(function(inv) {
+            var dateStr = new Date(inv.createdAt).toLocaleDateString('zh-CN');
+            var statusColor = inv.status === '有效中' ? 'text-green-400' : inv.status === '已使用' ? 'text-blue-400' : 'text-gray-500';
+            return '<div class="flex justify-between items-center bg-gray-900/50 rounded-lg px-3 py-2 text-sm">' +
+                '<span class="font-mono text-cyan-400">' + inv.code + '</span>' +
+                '<span class="' + statusColor + '">' + inv.status + '</span>' +
+                '<span class="text-gray-500 text-xs">' + dateStr + '</span>' +
+                '</div>';
+        }).join('');
     }
 
     formatNumber(num) {

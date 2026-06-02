@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-06-01T08:33:35.501Z",
+  "lastUpdate": "2026-06-01T09:40:08.218Z",
   "dates": [
     "2026-06-01",
     "2026-05-31",
@@ -122,7 +122,7 @@
         "llm"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:31:35.633Z"
+      "synced_at": "2026-06-01T09:38:10.503Z"
     },
     {
       "type": "github",
@@ -152,8 +152,8 @@
       "url": "https://github.com/maybe-finance/maybe",
       "description": "The personal finance app for everyone",
       "language": "Ruby",
-      "stars": 54147,
-      "forks": 5610,
+      "stars": 54146,
+      "forks": 5609,
       "topics": [
         "finance",
         "personal-finance",
@@ -165,45 +165,53 @@
         "turbo"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:31:40.115Z"
+      "synced_at": "2026-06-01T09:38:14.754Z"
     },
     {
       "type": "github",
       "date": "2026-06-01",
       "name": "comfyanonymous/ComfyUI",
       "author": "comfyanonymous",
-      "avatar": "https://github.com/comfyanonymous.png",
+      "avatar": "https://avatars.githubusercontent.com/u/166579949?v=4",
       "url": "https://github.com/comfyanonymous/ComfyUI",
-      "description": "基于节点的Stable Diffusion图形界面，支持复杂工作流设计。最近更新支持了更多视频生成模型，成为AI生图/生视频的首选工具。",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
       "language": "Python",
-      "stars": 61200,
-      "forks": 6500,
+      "stars": 115231,
+      "forks": 13470,
       "topics": [
         "stable-diffusion",
+        "pytorch",
         "ai",
-        "image-generation",
-        "workflow"
+        "python",
+        "comfy",
+        "comfyui"
       ],
-      "stars_synced": false
+      "stars_synced": true,
+      "synced_at": "2026-06-01T09:38:17.822Z"
     },
     {
       "type": "github",
       "date": "2026-06-01",
       "name": "lobehub/lobe-chat",
       "author": "lobehub",
-      "avatar": "https://github.com/lobehub.png",
+      "avatar": "https://avatars.githubusercontent.com/u/131470832?v=4",
       "url": "https://github.com/lobehub/lobe-chat",
-      "description": "开源的AI聊天框架，支持多模型（OpenAI/Claude/Gemini等）、插件系统、知识库。界面美观，支持PWA，可作为ChatGPT的开源自托管替代。",
+      "description": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
       "language": "TypeScript",
-      "stars": 45600,
-      "forks": 9800,
+      "stars": 78049,
+      "forks": 15357,
       "topics": [
         "chatgpt",
-        "llm",
-        "open-source",
-        "nextjs"
+        "openai",
+        "ai",
+        "gpt",
+        "claude",
+        "gemini",
+        "knowledge-base",
+        "deepseek"
       ],
-      "stars_synced": false
+      "stars_synced": true,
+      "synced_at": "2026-06-01T09:38:20.888Z"
     },
     {
       "type": "github",
@@ -214,8 +222,8 @@
       "url": "https://github.com/rustdesk/rustdesk",
       "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
       "language": "Rust",
-      "stars": 115318,
-      "forks": 17399,
+      "stars": 115319,
+      "forks": 17401,
       "topics": [
         "remote-control",
         "remote-desktop",
@@ -227,7 +235,7 @@
         "p2p"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:31:46.317Z"
+      "synced_at": "2026-06-01T09:38:23.327Z"
     },
     {
       "type": "github",
@@ -238,8 +246,8 @@
       "url": "https://github.com/n8n-io/n8n",
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
       "language": "TypeScript",
-      "stars": 190544,
-      "forks": 58183,
+      "stars": 190555,
+      "forks": 58187,
       "topics": [
         "automation",
         "ipaas",
@@ -251,7 +259,7 @@
         "workflow-automation"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:31:48.776Z"
+      "synced_at": "2026-06-01T09:38:25.791Z"
     },
     {
       "type": "business",
@@ -300,8 +308,8 @@
       "url": "https://github.com/langgenius/dify",
       "description": "Production-ready platform for agentic workflow development.",
       "language": "TypeScript",
-      "stars": 143364,
-      "forks": 22557,
+      "stars": 143378,
+      "forks": 22559,
       "topics": [
         "ai",
         "gpt",
@@ -313,7 +321,7 @@
         "gpt-4"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:31:51.300Z"
+      "synced_at": "2026-06-01T09:38:28.125Z"
     },
     {
       "type": "github",
@@ -337,7 +345,7 @@
         "firebase"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:31:53.781Z"
+      "synced_at": "2026-06-01T09:38:30.444Z"
     },
     {
       "type": "business",
@@ -386,8 +394,8 @@
       "url": "https://github.com/shadcn-ui/ui",
       "description": "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
       "language": "TypeScript",
-      "stars": 115396,
-      "forks": 8966,
+      "stars": 115398,
+      "forks": 8967,
       "topics": [
         "components",
         "nextjs",
@@ -399,7 +407,7 @@
         "base-ui"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:31:56.208Z"
+      "synced_at": "2026-06-01T09:38:32.742Z"
     },
     {
       "type": "github",
@@ -410,7 +418,7 @@
       "url": "https://github.com/oven-sh/bun",
       "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
       "language": "Rust",
-      "stars": 92698,
+      "stars": 92702,
       "forks": 4683,
       "topics": [
         "bun",
@@ -423,7 +431,7 @@
         "react"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:31:58.646Z"
+      "synced_at": "2026-06-01T09:38:35.122Z"
     },
     {
       "type": "business",
@@ -492,7 +500,7 @@
       "description": "The library for web and native user interfaces.",
       "language": "JavaScript",
       "stars": 245363,
-      "forks": 51147,
+      "forks": 51148,
       "topics": [
         "javascript",
         "react",
@@ -502,7 +510,7 @@
         "library"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:01.159Z"
+      "synced_at": "2026-06-01T09:38:37.578Z"
     },
     {
       "type": "github",
@@ -513,8 +521,8 @@
       "url": "https://github.com/golang/go",
       "description": "The Go programming language",
       "language": "Go",
-      "stars": 134155,
-      "forks": 19083,
+      "stars": 134157,
+      "forks": 19084,
       "topics": [
         "programming-language",
         "language",
@@ -522,7 +530,7 @@
         "golang"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:03.824Z"
+      "synced_at": "2026-06-01T09:38:39.917Z"
     },
     {
       "type": "github",
@@ -533,8 +541,8 @@
       "url": "https://github.com/torvalds/linux",
       "description": "Linux kernel source tree",
       "language": "C",
-      "stars": 235014,
-      "forks": 62643,
+      "stars": 235018,
+      "forks": 62645,
       "topics": [
         "linux",
         "kernel",
@@ -542,7 +550,7 @@
         "operating-system"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:06.292Z"
+      "synced_at": "2026-06-01T09:38:42.322Z"
     },
     {
       "type": "github",
@@ -554,7 +562,7 @@
       "description": "The React Framework",
       "language": "JavaScript",
       "stars": 139633,
-      "forks": 31174,
+      "forks": 31176,
       "topics": [
         "react",
         "server-rendering",
@@ -566,7 +574,7 @@
         "vercel"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:08.864Z"
+      "synced_at": "2026-06-01T09:38:44.733Z"
     },
     {
       "type": "business",
@@ -615,8 +623,8 @@
       "url": "https://github.com/kubernetes/kubernetes",
       "description": "Production-Grade Container Scheduling and Management",
       "language": "Go",
-      "stars": 122591,
-      "forks": 43228,
+      "stars": 122593,
+      "forks": 43229,
       "topics": [
         "kubernetes",
         "go",
@@ -624,7 +632,7 @@
         "containers"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:11.328Z"
+      "synced_at": "2026-06-01T09:38:47.081Z"
     },
     {
       "type": "github",
@@ -635,8 +643,8 @@
       "url": "https://github.com/microsoft/vscode",
       "description": "Visual Studio Code",
       "language": "TypeScript",
-      "stars": 185635,
-      "forks": 40279,
+      "stars": 185636,
+      "forks": 40281,
       "topics": [
         "editor",
         "electron",
@@ -645,7 +653,7 @@
         "microsoft"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:13.746Z"
+      "synced_at": "2026-06-01T09:38:49.410Z"
     },
     {
       "type": "business",
@@ -702,7 +710,7 @@
         "language"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:16.438Z"
+      "synced_at": "2026-06-01T09:38:51.916Z"
     },
     {
       "type": "github",
@@ -714,7 +722,7 @@
       "description": "An Open Source Machine Learning Framework for Everyone",
       "language": "C++",
       "stars": 195348,
-      "forks": 75335,
+      "forks": 75336,
       "topics": [
         "tensorflow",
         "machine-learning",
@@ -726,7 +734,7 @@
         "distributed"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:18.930Z"
+      "synced_at": "2026-06-01T09:38:54.769Z"
     },
     {
       "type": "business",
@@ -775,8 +783,8 @@
       "url": "https://github.com/nodejs/node",
       "description": "Node.js JavaScript runtime ✨🐢🚀✨",
       "language": "JavaScript",
-      "stars": 117456,
-      "forks": 35717,
+      "stars": 117457,
+      "forks": 35718,
       "topics": [
         "nodejs",
         "javascript",
@@ -788,7 +796,7 @@
         "macos"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:21.406Z"
+      "synced_at": "2026-06-01T09:38:57.346Z"
     },
     {
       "type": "github",
@@ -799,7 +807,7 @@
       "url": "https://github.com/vuejs/vue",
       "description": "This is the repo for Vue 2. For Vue 3, go to https://github.com/vuejs/core",
       "language": "TypeScript",
-      "stars": 209799,
+      "stars": 209800,
       "forks": 33886,
       "topics": [
         "vue",
@@ -808,7 +816,7 @@
         "framework"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:23.940Z"
+      "synced_at": "2026-06-01T09:38:59.721Z"
     },
     {
       "type": "business",
@@ -858,7 +866,7 @@
       "description": "The Python programming language",
       "language": "Python",
       "stars": 72933,
-      "forks": 34692,
+      "forks": 34693,
       "topics": [
         "python",
         "programming-language",
@@ -866,7 +874,7 @@
         "cpython"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:26.443Z"
+      "synced_at": "2026-06-01T09:39:02.076Z"
     },
     {
       "type": "github",
@@ -878,7 +886,7 @@
       "description": "The Web framework for perfectionists with deadlines.",
       "language": "Python",
       "stars": 87611,
-      "forks": 33987,
+      "forks": 33986,
       "topics": [
         "python",
         "django",
@@ -890,7 +898,7 @@
         "views"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:28.955Z"
+      "synced_at": "2026-06-01T09:39:04.409Z"
     },
     {
       "type": "business",
@@ -952,7 +960,7 @@
         "spark"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:31.401Z"
+      "synced_at": "2026-06-01T09:39:06.859Z"
     },
     {
       "type": "github",
@@ -963,7 +971,7 @@
       "url": "https://github.com/redis/redis",
       "description": "For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-rich cache, data structure server, and document and vector query engine.",
       "language": "C",
-      "stars": 74645,
+      "stars": 74643,
       "forks": 24639,
       "topics": [
         "database",
@@ -976,7 +984,7 @@
         "real-time"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:33.877Z"
+      "synced_at": "2026-06-01T09:39:09.370Z"
     },
     {
       "type": "business",
@@ -1025,7 +1033,7 @@
       "url": "https://github.com/git/git",
       "description": "Git Source Code Mirror - This is a publish-only repository but pull requests can be turned into patches to the mailing list via GitGitGadget (https://gitgitgadget.github.io/). Please follow Documentation/SubmittingPatches procedure for any of your improvements.",
       "language": "C",
-      "stars": 61234,
+      "stars": 61236,
       "forks": 27955,
       "topics": [
         "c",
@@ -1033,7 +1041,7 @@
         "hacktoberfest"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:36.613Z"
+      "synced_at": "2026-06-01T09:39:11.719Z"
     },
     {
       "type": "github",
@@ -1044,7 +1052,7 @@
       "url": "https://github.com/nginx/nginx",
       "description": "The official NGINX Open Source repository.",
       "language": "C",
-      "stars": 30524,
+      "stars": 30523,
       "forks": 7941,
       "topics": [
         "content-cache",
@@ -1057,7 +1065,7 @@
         "tls"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:39.064Z"
+      "synced_at": "2026-06-01T09:39:14.214Z"
     },
     {
       "type": "business",
@@ -1106,8 +1114,8 @@
       "url": "https://github.com/rtk-ai/rtk",
       "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
       "language": "Rust",
-      "stars": 57020,
-      "forks": 3507,
+      "stars": 57067,
+      "forks": 3510,
       "topics": [
         "agentic-coding",
         "ai-coding",
@@ -1119,7 +1127,7 @@
         "developer-tools"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:41.537Z"
+      "synced_at": "2026-06-01T09:39:16.757Z"
     },
     {
       "type": "github",
@@ -1130,8 +1138,8 @@
       "url": "https://github.com/Imbad0202/academic-research-skills",
       "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
       "language": "Python",
-      "stars": 25400,
-      "forks": 2092,
+      "stars": 25451,
+      "forks": 2094,
       "topics": [
         "academic-writing",
         "ai-research",
@@ -1143,7 +1151,7 @@
         "academic-pipeline"
       ],
       "stars_synced": true,
-      "synced_at": "2026-06-01T08:32:44.025Z"
+      "synced_at": "2026-06-01T09:39:18.736Z"
     },
     {
       "type": "github",
