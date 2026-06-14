@@ -1,6 +1,7 @@
 {
-  "lastUpdate": "2026-06-13T14:04:30.971Z",
+  "lastUpdate": "2026-06-14T14:00:30.229Z",
   "dates": [
+    "2026-06-14",
     "2026-06-13",
     "2026-06-12",
     "2026-06-11",
@@ -1421,7 +1422,7 @@
       "url": "https://github.com/obra/superpowers",
       "description": "Claude Code超能力核心技能库。扩展Claude Code的功能，提升开发效率。",
       "language": "Shell",
-      "stars": 194872,
+      "stars": 226934,
       "forks": 8900,
       "topics": [
         "claude",
@@ -3456,7 +3457,7 @@
       "name": "addyosmani/agent-skills",
       "author": "addyosmani",
       "description": "Google Chrome团队Addy Osmani出品，AI编码智能体工程技能集",
-      "stars": 9200,
+      "stars": 58861,
       "forks": 0,
       "language": "",
       "topics": [],
@@ -3601,7 +3602,7 @@
       "name": "apple/container",
       "author": "apple",
       "description": "Apple官方开源Linux容器工具，Swift编写，针对Apple芯片优化，轻量虚拟机运行容器",
-      "stars": 32480,
+      "stars": 36312,
       "forks": 0,
       "language": "",
       "topics": [],
@@ -3703,6 +3704,69 @@
       "competition": "中",
       "investment": "¥5-50万",
       "actionItems": []
+    },
+    {
+      "type": "business",
+      "date": "2026-06-14",
+      "title": "折叠露营推车/多场景户外营车",
+      "description": "核心逻辑：露营\"搬家式\"出行已成主流趋势，装备搬运是每个露营家庭的第一痛点。折叠推车（露营营车）同时覆盖露营、摆摊、买菜、海边搬运等多场景，属于\"户外+出行\"交叉品类。亚马逊\"folding camping wagon\"品类搜索结果超5000个，头部SKU月销5000-10000+单，但京东\"露营推车\"SKU数量远少于亚马逊，且头部品牌集中度不高，中小卖家仍有切入空间。产品结构以钢管/铝管+布面+万向轮为主，与你现有折叠椅管件+布面供应链高度复用。\n\n切入建议：主推\"宽体折叠露营推车\"——加宽版（内径90×55×35cm，比常规款宽15%）、承重150kg、360°万向轮+可拆卸桌面板（展开变餐桌）。京东定价200-350元，比头部品牌（牧高笛300-500元）低30%打性价比。主图突出\"一车四用（露营+摆摊+买菜+搬家）+3秒折叠+桌板秒变餐桌\"，差异化打\"推车+餐桌二合一\"场景，避免纯价格战。\n\n数据支撑：亚马逊\"folding camping wagon\"品类超5000个结果，头部Hikemoon款月销5K+、ROSONG款月销10K+（亚马逊Best Seller数据2026年6月）；1688折叠露营推车拿货价80-150元；中国露营市场规模2024年约350亿元，其中\"装备运输\"品类增速超30%（艾媒咨询）；小红书\"露营推车\"相关笔记超12万篇，抖音#露营推车#话题播放超5亿次。\n\n风险提示：① 露营推车属于户外大件，物流成本高（预估运费25-40元），需与工厂协商优化包装尺寸（部分款可压缩至60×30×15cm包装）；② 亚马逊竞争已白热化（5000+SKU），但京东竞争度远低于亚马逊，优先做京东本土市场，同时可考虑通过京东国际/京东全球购渠道反向切入\n\n1688参考：基础款折叠露营推车拿货价80-120元（钢管+600D牛津布），加宽升级款+桌面板100-150元，铝合金轻量款130-180元",
+      "tags": [
+        "折叠",
+        "露营",
+        "户外",
+        "京东",
+        "供应链"
+      ],
+      "potential": 3,
+      "marketSize": "中等",
+      "competition": "中",
+      "investment": "¥5-50万",
+      "actionItems": []
+    },
+    {
+      "type": "github",
+      "name": "kenn-io/agentsview",
+      "author": "kenn-io",
+      "description": "本地优先的编码Agent会话智能分析工具，支持Claude Code等20+Agent",
+      "stars": 2363,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "url": "https://github.com/kenn-io/agentsview",
+      "avatar": "https://github.com/kenn-io.png",
+      "date": "2026-06-14",
+      "stars_synced": false,
+      "synced_at": null
+    },
+    {
+      "type": "github",
+      "name": "iptv-org/iptv",
+      "author": "iptv-org",
+      "description": "全球公开IPTV频道集合",
+      "stars": 119578,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "url": "https://github.com/iptv-org/iptv",
+      "avatar": "https://github.com/iptv-org.png",
+      "date": "2026-06-14",
+      "stars_synced": false,
+      "synced_at": null
+    },
+    {
+      "type": "github",
+      "name": "LMCache/LMCache",
+      "author": "LMCache",
+      "description": "为LLM提供最快的KV缓存层加速",
+      "stars": 8991,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "url": "https://github.com/LMCache/LMCache",
+      "avatar": "https://github.com/LMCache.png",
+      "date": "2026-06-14",
+      "stars_synced": false,
+      "synced_at": null
     }
   ]
 }
